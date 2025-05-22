@@ -1,0 +1,1267 @@
+Lab 1: Introduction to LINUX Commands and Quick Editing with vi Editor
+Author: Saydullo Ismatov
+Date: 20 May 2025
+
+Task 1: Linux Commands Execution
+--------------------------------
+1. File Handling:
+----------------
+Created directory lab1_saydullo_files and changed into it.
+/Users/saydulloismatov/Downloads/lab1_saydullo_files
+Created saydullo_file.txt.
+saydullo_file.txt
+total 0
+drwxr-xr-x@  3 saydulloismatov  staff    96 May 20 10:50 .
+drwx------@ 73 saydulloismatov  staff  2336 May 20 10:50 ..
+-rw-r--r--@  1 saydulloismatov  staff     0 May 20 10:50 saydullo_file.txt
+Hello from Saydullo's lab1
+Hello from Saydullo's lab1
+Hello from Saydullo's lab1
+saydullo_file.txt
+saydullo_file_copy.txt
+saydullo_file.txt
+saydullo_file_renamed.txt
+Cleaned up lab1_saydullo_files directory.
+/Users/saydulloismatov/Downloads
+210057-Saydullo-Ismatov-Computer keyboard_gaming keyboard design-HCI-CAU-2025.docx
+210057-Saydullo-Ismatov-Computer keyboard_gaming keyboard design-HCI-CAU-2025.pdf
+210057_Saydullo_Ismatov_SmartKeyboardDesign_210057_Saydullo_Ismatov.docx
+9 - DevSecOps.pptx.pdf
+Assignment2_1.pdf
+CS1-21 group graduation project 2 final exam guidelines.docx
+ChatGPT Image May 12, 2025, 02_42_50 AM.png
+ChatGPT Image May 13, 2025, 12_08_27 PM.png
+Cursor-darwin-universal.dmg
+Cybersecurity Final Exam Review.docx
+Cybersecurity_Assignment_Solutions.docx
+Cybersecurity_Take_Home_Assignments (1).docx
+Cybersecurity_Take_Home_Assignments.docx
+EthicalHackerCertificate.pdf
+FileNameMon_Feb_05_2024_12_44_17_GMT+0500_Uzbekistan_Standard_Time.pdf
+Graduation Project 2 supervisor attendance form (1).docx
+Graduation Project 2 supervisor attendance form.docx
+IMG 6304 from Google Photos.heic
+IMG_9275.PNG
+IMG_9277.PNG
+IMG_9278 (1).PNG
+IMG_9278.PNG
+IMG_9576.HEIC
+IMG_9860.HEIC
+IMG_9861.HEIC
+IMG_9862.HEIC
+IMG_9863.HEIC
+IMG_9866.HEIC
+IMG_9867.HEIC
+IMG_9868.HEIC
+Lab 14th week (1).docx
+Lab14_Report.docx
+Lab14_Report_210057.pdf
+Lab14_Report_Described.docx
+Lab14_Report_Final.docx
+OneDrive_1_5-14-2025 (1).zip
+OneDrive_1_5-14-2025.zip
+OrbStack_v1.10.3_19083_arm64.dmg
+Passport(2).pdf
+Red passport (1).pdf
+Report structure(HCI).pdf
+Resume_Saydullo_Ismatov_tex.pdf
+SPLabs-main
+SPLabs-main.zip
+Saydullo_Ismatov_Yangi_Rezyume.docx
+Umidjon Zokirov.docx
+Umidjon_Zokirov_CV_Uzbek.pdf
+Umidjon_Zokirov_Yangi_Rezyume (1).docx
+Umidjon_Zokirov_Yangi_Rezyume.docx
+VisionFit Thesis.docx
+Zokirov_Umidjon_CV (1).docx
+Zokirov_Umidjon_CV.docx
+[210057-Saydullo-Ismatov-SmartKeyboardDesign] 210057-Saydullo-Ismatov-SmartKeyboardDesign-HCI-CAU-2025.docx
+lab1.md
+lab1_saydullo.sh
+lab1_saydullo_output.txt
+labsysprog1.pdf
+labsysprog12 (1).pdf
+labsysprog12.pdf
+photo_2025-05-11 23.34.19.jpeg
+photo_2025-05-12 10.57.17.jpeg
+photo_2025-05-15 09.26.31.jpeg
+photo_2025-05-16 10.31.50.jpeg
+photo_2025-05-16 10.31.51.jpeg
+photo_2025-05-16 10.31.52.jpeg
+photo_2025-05-16 10.31.53.jpeg
+photo_2025-05-19 00.34.11.jpeg
+photo_2025-05-19 02.30.29.jpeg
+
+2. Process Management:
+---------------------
+  PID TTY           TIME CMD
+81742 ttys003    0:00.03 /bin/zsh -il
+81791 ttys003    0:00.01 /bin/bash ./lab1_saydullo.sh
+Running top snapshot (using top -l 1 | cat):
+Processes: 456 total, 2 running, 454 sleeping, 3063 threads 
+2025/05/20 10:50:23
+Load Avg: 3.66, 4.62, 3.65 
+CPU usage: 6.92% user, 14.96% sys, 78.11% idle 
+SharedLibs: 232M resident, 67M data, 36M linkedit.
+MemRegions: 891432 total, 1161M resident, 69M private, 869M shared.
+PhysMem: 7542M used (1693M wired, 3393M compressor), 92M unused.
+VM: 242T vsize, 5533M framework vsize, 66461763(0) swapins, 70467179(0) swapouts.
+Networks: packets: 136360554/151G in, 35050664/6112M out.
+Disks: 103183666/3082G read, 57541573/1757G written.
+
+PID    COMMAND          %CPU TIME     #TH   #WQ  #PORTS MEM   PURG CMPRS PGRP  PPID  STATE    BOOSTS        %CPU_ME %CPU_OTHRS UID FAULTS    COW    MSGSENT   MSGRECV    SYSBSD     SYSMACH    CSW        PAGEINS IDLEW    POWER INSTRS CYCLES JETPRI USER                   #MREGS RPRVT VPRVT VSIZE KPRVT KSHRD
+91883  IOUserBluetoothS 0.0  00:00.82 2     1    76     816K  0B   672K  91883 1     sleeping  0[1]         0.00000 0.00000    270 20373     80     12881     8546       8806       8691       30537      357     0        0.0   0      0      150    _driverkit             N/A    N/A   N/A   N/A   N/A   N/A  
+91828  bluetoothd       0.0  29:55.04 9     3    477    33M   0B   27M   91828 1     sleeping *0[1]         0.00000 0.00000    0   5276029   242    4069847   3049395    45593879   8398553    18820349   73694   13341    0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+90198  Google Chrome He 0.0  00:53.54 17    1    154    50M   0B   47M   32036 32036 sleeping *0[43937]     0.00000 0.00000    501 4320881   1451   191616    155313     228827     440610     660770     306     1320     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+89414  Google Chrome He 0.0  11:00.96 19    1    313    231M  0B   167M  32036 32036 sleeping *0[247997]    0.00000 0.00000    501 35516382  1833   2065102   1130124    4523792    5280741    6910144    10159   3863     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+88508  Google Chrome He 0.0  03:48.16 19    1    178    76M   0B   67M   32036 32036 sleeping *0[505755]    0.00000 0.00000    501 10460693  1466   2046484   1320010    2597648    4132953    3037454    1485    4535     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+87132  com.apple.CodeSi 0.0  00:14.14 3     2    21     2497K 0B   1376K 87132 1     sleeping *0[7303]      0.00000 0.00000    0   1032277   126    23514     31053      1354938    73752      112298     738     223      0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81815  cat              0.0  00:00.00 1     0    11     977K  0B   0B    81791 81791 sleeping *0[1]         0.00000 0.00000    501 221       52     27        13         122        57         3          1       0        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81814  top              0.0  00:00.79 1/1   0    16     6049K 0B   0B    81791 81791 running  *0[1]         0.00000 0.00000    0   1067      86     1813444   906721     2442       911212     222        7       0        0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81794  ReportMemoryExce 0.0  00:00.05 5     3    54     2481K 0B   0B    81794 1     sleeping *0[2]         0.00000 0.00000    269 930       136    207       89         969        361        229        69      0        0.0   0      0      0      _reportmemoryexception N/A    N/A   N/A   N/A   N/A   N/A  
+81793  ReportCrash      0.0  00:00.02 4     2    32     2049K 0B   0B    81793 1     sleeping *0[1]         0.00000 0.00000    0   613       134    78        33         324        187        119        33      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81792  XprotectService  0.0  00:00.30 5     4    35     19M   0B   0B    81792 1     sleeping *0[1]         0.00000 0.00000    0   3145      168    101       40         11235      222        1139       41      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81791  bash             0.0  00:00.00 1     0    11     1121K 0B   0B    81791 81742 sleeping *0[1]         0.00000 0.00000    501 736       283    66        32         583        86         39         10      0        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81789  AXVisualSupportA 0.0  00:00.06 7     5    158    8706K 0B   4432K 81789 1     sleeping *0[3]         0.00000 0.00000    501 3165      244    604       153        2033       1482       799        66      0        0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81777  mdworker_shared  0.0  00:00.10 3     1    47     3393K 0B   2928K 81777 1     sleeping *0[1]         0.00000 0.00000    501 1591      152    341       140        996        405        191        24      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81774  mdworker_shared  0.0  00:00.13 4     1    49     3793K 0B   3424K 81774 1     sleeping *0[1]         0.00000 0.00000    501 2226      154    417       166        2094       525        250        8       0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81773  mdworker_shared  0.0  00:00.10 3     1    47     3345K 0B   2944K 81773 1     sleeping *0[1]         0.00000 0.00000    501 2036      153    375       152        1124       453        207        11      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81742  zsh              0.0  00:00.02 1     0    22     1937K 0B   912K  81742 77511 sleeping *0[1]         0.00000 0.00000    501 1211      334    86        37         3730       236        212        75      0        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81737  accessoryupdater 0.0  00:00.15 3     2    53     4497K 0B   4128K 81737 1     sleeping *0[1]         0.00000 0.00000    278 1462      166    183       57         2003       375        942        237     0        0.0   0      0      0      _accessoryupdater      N/A    N/A   N/A   N/A   N/A   N/A  
+81716  XprotectService  0.0  00:00.03 2     1    40     3201K 0B   2848K 81716 1     sleeping *0[1]         0.00000 0.00000    501 1417      140    145       49         738        292        110        11      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81711  VTDecoderXPCServ 0.0  00:00.10 3     1    81     5489K 0B   4336K 81711 1     sleeping *7[2]         0.00000 0.00000    501 1386      168    520       237        1537       793        545        186     0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81709  CGPDFService     0.0  00:00.11 3     2    33     3697K 0B   3376K 81709 1     sleeping *0[13]        0.00000 0.00000    501 1250      143    161       72         1129       339        768        93      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81689  mdworker_shared  0.0  00:00.25 4     1    49     3569K 0B   1472K 81689 1     sleeping *0[1]         0.00000 0.00000    501 5021      154    696       258        5230       962        569        35      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81684  Google Chrome He 0.0  00:00.07 12    1    80     20M   0B   17M   32036 32036 sleeping *0[38]        0.00000 0.00000    501 7426      1250   342       190        1487       1885       875        18      3        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81682  netbiosd         0.0  00:00.10 3     2    26     2449K 0B   1760K 81682 1     sleeping *0[1]         0.00000 0.00000    222 1182      139    118       36         796        215        876        41      2        0.0   0      0      40     _netbios               N/A    N/A   N/A   N/A   N/A   N/A  
+81675  com.apple.hiserv 0.0  00:00.03 2     1    44     2273K 0B   1968K 81675 1     sleeping  0[0]         0.00000 0.00000    0   823       127    160       128        763        318        328        7       0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81673  CloudTelemetrySe 0.0  00:00.10 2     1    37     4977K 0B   4544K 81673 1     sleeping  0[0]         0.00000 0.00000    501 1651      156    147       45         1078       325        762        66      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81672  AppSSODaemon     0.0  00:00.21 3     1    138    6193K 0B   5680K 81672 1     sleeping *0[25]        0.00000 0.00000    0   2647      209    1985      851        5258       6843       3090       48      19       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81671  GSSCred          0.0  00:00.09 3     2    41     3025K 0B   2432K 81671 1     sleeping *0[1]         0.00000 0.00000    0   1143      143    109       42         796        241        427        149     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81669  swtransparencyd  0.0  00:00.09 2     1    50     4897K 0B   4496K 81669 1     sleeping *0[5]         0.00000 0.00000    501 1748      194    172       53         2554       426        737        223     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81668  AppSSOAgent      0.0  00:00.15 3     1    180    10M   0B   9520K 81668 1     sleeping *0[33]        0.00000 0.00000    501 5532      256    792       241        3069       1923       1840       888     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81648  WeatherWidget    0.0  00:01.28 5     4/3  133    19M   0B   19M   81648 1     sleeping *0[1]         0.00000 0.00000    501 8280      642    665       219        9569       1529       4576       3469    3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81638  pbs              0.0  00:00.04 2     1    40     2929K 0B   2608K 81638 1     sleeping *0[9]         0.00000 0.00000    501 1230      133    201       95         2212       429        466        18      1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81635  sysmond          0.0  00:00.24 2     1    17     1713K 0B   1472K 81635 1     sleeping  0[0]         0.00000 0.00000    0   593       122    3398      2032       4094       3255       890        20      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81632  VTDecoderXPCServ 0.0  00:00.72 2     1    64     5025K 0B   3360K 81632 1     sleeping *0[12]        0.00000 0.00000    501 4765      172    32251     16236      13121      34913      8792       249     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81629  smd              0.0  00:00.02 2     1    20     1649K 0B   1392K 81629 1     sleeping  0[0]         0.00000 0.00000    0   773       121    102       62         478        233        216        21      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81624  AppPredictionInt 0.0  00:00.19 2     1    40     5298K 0B   4816K 81624 1     sleeping  0[0]         0.00000 0.00000    501 1917      174    200       67         837        397        735        528     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81623  countryd         0.0  00:00.12 2     1    44     3377K 0B   2976K 81623 1     sleeping *0[4]         0.00000 0.00000    0   1875      140    163       70         1646       296        426        53      1        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81614  ScreenTimeAgent  0.0  00:00.32 2     1    103    7009K 0B   6624K 81614 1     sleeping *0[1]         0.00000 0.00000    501 3032      230    415       141        6926       1007       2622       574     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81603  Cursor Helper (P 0.0  00:00.24 10    1    64     29M   0B   26M   76545 81567 sleeping *0[1]         0.00000 0.00000    501 10173     542    123       43         4263       470        2229       9       32       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81600  MTLCompilerServi 0.0  00:00.67 2     1    36     30M   0B   29M   81600 1     sleeping *0[9]         0.00000 0.00000    501 9580      321    140       52         1810       356        2097       1746    0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81594  Google Chrome He 0.0  00:01.96 18    1    136    116M  0B   106M  32036 32036 sleeping *0[575]       0.00000 0.00000    501 91405     1262   2401      1956       17527      8393       8739       1134    5        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81572  amfid            0.0  00:00.03 2     1    40     3377K 0B   3056K 81572 1     sleeping *0[1]         0.00000 0.00000    0   1441      138    114       50         953        275        219        34      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81567  Cursor Helper (P 0.0  00:12.26 27    1    118    218M  0B   178M  76545 76545 sleeping *0[1811]      0.00000 0.00000    501 158083    596    33352     8322       184960     117630     102471     1364    385      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81564  Cursor Helper    0.0  00:00.45 21    1    125    35M   0B   27M   76545 76545 sleeping *0[5]         0.00000 0.00000    501 14951     549    1262      122        7923       5592       7207       754     58       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81563  ScopedBookmarkAg 0.0  00:00.10 2     1    55     4145K 0B   3760K 81563 1     sleeping *0[3]         0.00000 0.00000    501 1936      148    212       83         1626       549        383        87      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81554  promotedcontentd 0.0  00:00.37 2     1    74     6081K 0B   5408K 81554 1     sleeping *0[2]         0.00000 0.00000    501 4876      219    339       96         4258       694        2354       314     3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81553  triald_system    0.0  00:00.14 2     1    41     3409K 0B   3088K 81553 1     sleeping  0[0]         0.00000 0.00000    0   1038      150    100       39         2783       233        882        7       0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81552  MTLCompilerServi 0.0  00:00.03 2     1    36     7617K 0B   7168K 81552 1     sleeping *0[2]         0.00000 0.00000    501 1546      155    128       43         562        298        520        262     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81551  MTLCompilerServi 0.0  00:00.03 2     1    36     7329K 0B   6896K 81551 1     sleeping *0[2]         0.00000 0.00000    501 1494      155    128       43         563        294        548        134     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81550  linkd            0.0  00:04.02 2     1    50     5489K 0B   5104K 81550 1     sleeping *0[1]         0.00000 0.00000    501 3415      172    216       72         101950     445        16250      394     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81544  com.apple.AppSto 0.0  00:00.05 2     1    27     4033K 0B   3696K 81544 1     sleeping *0[1]         0.00000 0.00000    0   899       127    78        33         433        183        227        5       0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81543  installcoordinat 0.0  00:00.07 2     1    35     2673K 0B   2368K 81543 1     sleeping *0[1]         0.00000 0.00000    274 1067      134    94        34         589        211        289        54      0        0.0   0      0      0      _installcoordinationd  N/A    N/A   N/A   N/A   N/A   N/A  
+81542  storagekitd      0.0  00:00.77 6     1    83     4929K 0B   4560K 81542 1     sleeping *0[3]         0.00000 0.00000    0   1616      164    13366     6440       6696       12931      3524       222     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81541  osanalyticshelpe 0.0  00:00.09 3     2    40     2961K 0B   2624K 81541 1     sleeping  0[0]         0.00000 0.00000    0   1018      144    112       43         623        233        454        52      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81540  AssetCacheTether 0.0  00:00.11 2     1    28     2257K 0B   1968K 81540 1     sleeping  0[0]         0.00000 0.00000    0   982       130    88        36         581        227        621        110     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81539  appstoreagent    0.0  00:00.80 3     1    122    9377K 0B   8848K 81539 1     sleeping *0[14]        0.00000 0.00000    501 8131      268    817       274        15084      1757       6023       591     11       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81538  aneuserd         0.0  00:00.09 3     2    37     2865K 0B   2576K 81538 1     sleeping *0[1]         0.00000 0.00000    296 1017      143    136       48         755        285        886        28      0        0.0   0      0      0      _neuralengine          N/A    N/A   N/A   N/A   N/A   N/A  
+81537  cloudd           0.0  00:00.20 2     1    51     4673K 0B   4288K 81537 1     sleeping *0[86]        0.00000 0.00000    0   1516      181    165       208        4374       527        1469       106     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81536  geodMachServiceB 0.0  00:00.03 2     1    35     2305K 0B   2016K 81536 1     sleeping *0[2]         0.00000 0.00000    501 714       138    116       41         384        246        254        31      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81535  AssetCache       0.0  00:00.11 2     1    48     3953K 0B   3600K 81535 1     sleeping  0[0]         0.00000 0.00000    235 1196      152    119       41         964        277        673        91      0        0.0   0      0      0      _assetcache            N/A    N/A   N/A   N/A   N/A   N/A  
+81533  triald           0.0  00:00.92 2     1    64     4977K 0B   4592K 81533 1     sleeping *0[5]         0.00000 0.00000    501 2408      204    303       90         9133       677        4822       417     1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81532  deleted_helper   0.0  00:00.05 2     1    23     1921K 0B   1648K 81532 1     sleeping *0[1]         0.00000 0.00000    0   619       124    82        40         402        179        650        4       0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81531  deleted          0.0  00:02.08 2     1    73     4945K 0B   4560K 81531 1     sleeping *0[8]         0.00000 0.00000    501 2555      172    11112     5490       36225      10452      8552       193     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81530  ContextService   0.0  00:00.14 2     1    47     5585K 0B   5136K 81530 1     sleeping  0[0]         0.00000 0.00000    501 1518      201    165       61         1326       333        517        460     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81529  CategoriesServic 0.0  00:00.03 2     1    39     2689K 0B   2384K 81529 1     sleeping  0[0]         0.00000 0.00000    501 991       128    142       47         612        280        218        9       0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81528  AssetCacheLocato 0.0  00:00.04 2     1    46     3105K 0B   2768K 81528 1     sleeping *0[1]         0.00000 0.00000    501 1309      138    156       50         771        352        409        27      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81526  spotlightknowled 0.0  00:00.39 3     1    57     7313K 0B   6880K 81526 1     sleeping *0[2]         0.00000 0.00000    501 2644      210    307       93         9253       658        2770       368     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81525  findmylocateagen 0.0  00:00.28 2     1    90     7505K 0B   7120K 81525 1     sleeping *0[18]        0.00000 0.00000    501 2954      224    409       219        5590       1120       2361       217     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81524  ContainerMetadat 0.0  00:00.07 2     1    38     2641K 0B   2336K 81524 1     sleeping *0[1]         0.00000 0.00000    501 1148      138    132       52         596        263        667        6       0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81523  donotdisturbd    0.0  00:00.46 2     1    155    8593K 0B   8128K 81523 1     sleeping *0[2]         0.00000 0.00000    501 4157      274    576       182        9654       1209       2583       435     1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81522  ManagedSettingsA 0.0  00:00.08 2     1    38     2641K 0B   2384K 81522 1     sleeping *0[4]         0.00000 0.00000    501 1168      141    132       51         858        273        660        74      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81521  dmd              0.0  00:00.21 2     1    55     5297K 0B   4944K 81521 1     sleeping *0[3]         0.00000 0.00000    501 2297      172    231       105        3390       908        1560       230     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81520  UsageTrackingAge 0.0  00:00.36 2     1    101    6401K 0B   5984K 81520 1     sleeping *0[4]         0.00000 0.00000    501 2754      227    387       117        7980       909        2625       382     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81519  mobiletimerd     0.0  00:00.12 3     2    55     3617K 0B   2656K 81519 1     sleeping *0[1]         0.00000 0.00000    501 2853      150    228       56         1918       548        999        140     7        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81518  siriactionsd     0.0  00:00.89 3     2    109    11M   0B   9072K 81518 1     sleeping *0[1]         0.00000 0.00000    501 6984      305    493       208        19782      1544       6242       1227    1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81512  MTLCompilerServi 0.0  00:02.61 2     1    36     37M   0B   32M   81512 1     sleeping *0[74]        0.00000 0.00000    501 28164     321    214       122        7148       500        4899       6395    0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81506  containermanager 0.0  00:00.07 2     1    33     2849K 0B   2496K 81506 1     sleeping *0[2]         0.00000 0.00000    262 1017      128    140       55         1160       274        319        13      0        0.0   0      0      0      _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+81505  containermanager 0.0  00:00.07 2     1    34     2897K 0B   2544K 81505 1     sleeping *0[2]         0.00000 0.00000    205 1025      128    140       55         1141       271        287        13      0        0.0   0      0      0      _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+81504  trustdFileHelper 0.0  00:00.05 2     1    29     2529K 0B   2256K 81504 1     sleeping *0[1]         0.00000 0.00000    0   916       128    95        42         1052       214        103        6       0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81503  neagent          0.0  00:00.07 2     1    50     3217K 0B   2880K 81503 1     sleeping *0[1]         0.00000 0.00000    501 2171      141    176       72         1144       358        296        29      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81502  trustd           0.0  00:00.20 2     1    57     6305K 0B   5584K 81502 1     sleeping *0[5]         0.00000 0.00000    205 3297      169    298       116        3910       726        887        47      2        0.0   0      0      0      _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+81501  trustd           0.0  00:00.17 2     1    50     5393K 0B   5072K 81501 1     sleeping *0[3]         0.00000 0.00000    262 2074      153    247       98         3325       609        644        49      1        0.0   0      0      0      _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+81500  nehelper         0.0  00:00.11 2     1    57     3185K 0B   2880K 81500 1     sleeping *0[49]        0.00000 0.00000    0   2211      139    220       114        2141       465        697        57      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81499  cfprefsd         0.0  00:00.05 2     1    32     2273K 0B   1984K 81499 1     sleeping *0[3]         0.00000 0.00000    205 800       124    118       44         698        250        124        2       0        0.0   0      0      0      _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+81498  cfprefsd         0.0  00:00.04 2     1    27     2209K 0B   1936K 81498 1     sleeping *0[6]         0.00000 0.00000    262 801       123    117       45         670        243        116        4       0        0.0   0      0      0      _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+81497  secinitd         0.0  00:00.06 2     1    46     3585K 0B   3248K 81497 1     sleeping *0[2]         0.00000 0.00000    205 1262      152    198       71         1100       370        174        5       0        0.0   0      0      0      _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+81496  secinitd         0.0  00:00.05 2     1    45     3505K 0B   3168K 81496 1     sleeping *0[1]         0.00000 0.00000    262 1245      152    198       71         1044       372        169        7       0        0.0   0      0      0      _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+81495  com.apple.geod   0.0  00:00.15 2     1    47     5985K 0B   5152K 81495 1     sleeping *0[9]         0.00000 0.00000    205 6024      202    288       105        5920       633        1358       50      5        0.0   0      0      0      _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+81494  com.apple.geod   0.0  00:00.14 2     1    47     5985K 0B   5152K 81494 1     sleeping *0[5]         0.00000 0.00000    262 5875      202    283       102        5402       628        1276       33      3        0.0   0      0      0      _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+81493  com.apple.geod   0.0  00:00.31 2     1    64     6705K 0B   6032K 81493 1     sleeping *0[28]        0.00000 0.00000    501 7350      203    456       253        15660      1010       2077       409     5        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81492  secinitd         0.0  00:00.15 2     1    44     3937K 0B   3600K 81492 1     sleeping *0[13]        0.00000 0.00000    501 2999      152    547       245        4150       760        672        29      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81490  extensionkitserv 0.0  00:00.04 2     1    34     3185K 0B   2880K 81490 1     sleeping *0[3]         0.00000 0.00000    501 1697      151    165       57         1485       320        219        60      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81488  naturallanguaged 0.0  00:00.07 2     1    43     2593K 0B   2272K 81488 1     sleeping *0[1]         0.00000 0.00000    501 949       136    128       43         534        259        100        39      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81487  SetStoreUpdateSe 0.0  00:00.08 3     2    34     2913K 0B   2528K 81487 1     sleeping *0[1]         0.00000 0.00000    501 1453      146    148       51         870        317        263        100     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81486  IMDPersistenceAg 0.0  00:00.23 2     1    103    7057K 0B   6672K 81486 1     sleeping *0[2]         0.00000 0.00000    501 2423      221    396       85         4456       994        793        151     1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81484  securityd_system 0.0  00:00.15 2     1    30     3121K 0B   2800K 81484 1     sleeping *0[32]        0.00000 0.00000    0   2995      138    260       200        2702       889        629        60      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81483  findmybeaconingd 0.0  00:00.22 2     1    41     4753K 0B   4384K 81483 1     sleeping *0[6]         0.00000 0.00000    0   2671      169    183       67         1606       484        1122       238     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81482  com.apple.iCloud 0.0  00:00.15 3     2    53     4033K 0B   3056K 81482 1     sleeping *0[4]         0.00000 0.00000    501 2284      157    205       74         1786       453        603        31      1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81478  coresymbolicatio 0.0  00:00.05 3     2    24     2001K 0B   1120K 81478 1     sleeping *0[2]         0.00000 0.00000    0   1083      124    83        42         478        178        191        53      1        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81476  ReportCrash      0.0  00:00.02 3     1    34     2161K 0B   1872K 81476 1     sleeping *0[1]         0.00000 0.00000    501 766       136    113       41         379        260        156        37      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81473  backupd-helper   0.0  00:00.11 2     1    49     3041K 0B   2704K 81473 1     sleeping  0[0]         0.00000 0.00000    0   1147      144    1069      507        1034       1205       481        98      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81466  logd_helper      0.0  00:00.05 2     1    20     1921K 0B   1088K 81466 1     sleeping *0[1]         0.00000 0.00000    0   872       122    67        34         511        147        398        12      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81465  com.apple.Charac 0.0  00:00.02 2     1    31     1905K 0B   1648K 81465 1     sleeping *0[1]         0.00000 0.00000    501 638       131    106       41         390        222        104        27      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81464  sysextd          0.0  00:00.08 2     1    37     3233K 0B   2896K 81464 1     sleeping *0[1]         0.00000 0.00000    0   1075      159    117       47         748        264        158        60      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81463  nesessionmanager 0.0  00:00.11 2     1    60     3185K 0B   2912K 81463 1     sleeping *0[6]         0.00000 0.00000    0   1647      142    219       77         1407       487        677        166     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81460  calaccessd       0.0  00:00.78 2     1    171    9665K 0B   9248K 81460 1     sleeping *0[4]         0.00000 0.00000    501 7598      281    1242      323        12840      2898       3784       934     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81459  contactsd        0.0  00:02.01 2     1    241    11M   0B   11M   81459 1     sleeping *0[34]        0.00000 0.00000    501 11380     256    4047      3292       52805      13364      10639      108     4        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81458  knowledge-agent  0.0  00:00.78 2     1    164    11M   0B   10M   81458 1     sleeping *0[18]        0.00000 0.00000    501 8535      313    744       209        14023      2243       3309       1415    3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81457  gamecontrollerag 0.0  00:00.10 3     2    45     2817K 0B   1840K 81457 1     sleeping *0[1]         0.00000 0.00000    501 2974      140    270       62         1666       830        1007       16      7        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81456  gamecontrollerd  0.0  00:00.14 3     2    85     3489K 0B   2432K 81456 1     sleeping *0[4]         0.00000 0.00000    247 3382      151    453       118        2241       1074       1159       127     4        0.0   0      0      0      _gamecontrollerd       N/A    N/A   N/A   N/A   N/A   N/A  
+81454  icloudmailagent  0.0  00:00.04 1     0    29     2145K 0B   1856K 81454 1     sleeping *0[71]        0.00000 0.00000    501 772       139    99        34         325        217        87         62      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81453  feedbackd        0.0  00:00.05 2     1    49     3009K 0B   2656K 81453 1     sleeping *1[1]         0.00000 0.00000    501 1004      151    138       42         632        285        153        139     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81452  maild            0.0  00:00.10 3     2    43     3153K 0B   2528K 81452 1     sleeping *1[1]         0.00000 0.00000    501 1641      153    120       36         811        252        363        102     14       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81451  SidecarRelay     0.0  00:00.15 2     1    44     4545K 0B   4192K 81451 1     sleeping *0[49]        0.00000 0.00000    501 2666      148    145       99         777        362        327        95      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81450  com.apple.Stream 0.0  00:00.10 2     1    42     7361K 0B   6976K 81450 1     sleeping  0[0]         0.00000 0.00000    501 1097      127    145       60         1166       332        277        15      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81449  appplaceholdersy 0.0  00:00.80 2     1    50     5361K 0B   4960K 81449 1     sleeping *0[1]         0.00000 0.00000    501 1832      205    386       122        24343      989        2307       152     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81421  sandboxd         0.0  00:00.02 2     1    27     2657K 0B   2320K 81421 1     sleeping *0[1]         0.00000 0.00000    0   1047      134    124       43         705        310        188        30      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81420  localizationswit 0.0  00:00.04 2     1    39     2945K 0B   2608K 81420 1     sleeping *0[2]         0.00000 0.00000    501 1560      142    1354      596        3319       1569       554        4       0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81419  PerfPowerTelemet 0.0  00:00.01 2     1    25     3825K 0B   3472K 81419 1     sleeping *0[1]         0.00000 0.00000    0   785       129    78        34         390        181        67         16      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81418  replicatord      0.0  00:01.22 2     1    107    8226K 0B   7312K 81418 1     sleeping *0[1]         0.00000 0.00000    501 6567      243    854       575        58838      5728       5777       650     9        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81417  chronod          0.0  00:06.54 2     1    149    29M   0B   28M   81417 1     sleeping *0[1]         0.00000 0.00000    501 14896     399    3081      1200       58116      7436       19357      2008    4        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81416  audiomxd         0.0  00:00.06 2     1    60     3281K 0B   2928K 81416 1     sleeping *0[1]         0.00000 0.00000    294 1656      154    176       70         1237       390        495        206     0        0.0   0      0      0      _audiomxd              N/A    N/A   N/A   N/A   N/A   N/A  
+81402  CloudTelemetrySe 0.0  00:00.17 2     1    37     5329K 0B   4896K 81402 1     sleeping *0[4]         0.00000 0.00000    501 2409      164    184       80         2025       467        743        175     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81399  adid             0.0  00:00.14 2     1    38     2641K 0B   2368K 81399 1     sleeping *0[9]         0.00000 0.00000    265 2055      135    371       226        2510       1186       710        264     0        0.0   0      0      0      _fpsd                  N/A    N/A   N/A   N/A   N/A   N/A  
+81398  akd              0.0  00:00.31 2     1    79     5089K 0B   4704K 81398 1     sleeping *0[9]         0.00000 0.00000    501 3337      194    537       219        4271       1356       1610       326     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81397  syncdefaultsd    0.0  00:00.44 2     1    114    6929K 0B   6544K 81397 1     sleeping *0[33]        0.00000 0.00000    501 6964      185    724       380        14141      1817       3390       603     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81396  containermanager 0.0  00:00.07 2     1    36     5313K 0B   4912K 81396 1     sleeping *0[3]         0.00000 0.00000    0   2115      127    137       76         1165       302        438        49      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81395  amsengagementd   0.0  00:01.04 3     2    101    9394K 0B   7616K 81395 1     sleeping *0[3]         0.00000 0.00000    501 9804      263    777       288        10510      1811       5554       1301    5        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81394  amsaccountsd     0.0  00:00.35 3     2    83     7169K 0B   5728K 81394 1     sleeping *1[1]         0.00000 0.00000    501 6800      212    496       212        6490       1172       2501       633     5        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81391  online-auth-agen 0.0  00:00.03 3     2    29     3425K 0B   3088K 81391 1     sleeping *1[1]         0.00000 0.00000    0   723       131    92        38         505        214        91         38      0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81383  idleassetsd      0.0  00:00.35 3     2    55     11M   0B   9664K 81383 1     sleeping *0[1]         0.00000 0.00000    0   7147      179    339       67         10118      3565       2326       359     17       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81382  replayd          0.0  00:02.73 5     4    100    8033K 0B   7200K 81382 1     sleeping *0[2]         0.00000 0.00000    501 7181      226    1210      545        20858      1700       5618       2016    10       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81381  MessagesBlastDoo 0.0  00:00.28 2     1    33     4641K 0B   4272K 81381 1     sleeping  0[0]         0.00000 0.00000    501 1506      205    1862      917        998        1450       927        906     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81380  businessservices 0.0  00:00.16 2     1    56     4337K 0B   3936K 81380 1     sleeping  0[0]         0.00000 0.00000    501 1575      203    176       45         1119       397        779        370     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81379  ospredictiond    0.0  00:00.14 2     1    36     4257K 0B   3872K 81379 1     sleeping *2[1]         0.00000 0.00000    0   1467      184    135       45         983        270        444        244     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81362  Google Chrome He 0.0  00:12.96 17    1    143    89M   0B   86M   32036 32036 sleeping *0[8009]      0.00000 0.00000    501 2035491   1274   46892     27418      83834      81031      39583      131     108      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81361  Google Chrome He 0.0  00:00.63 18    1    164    39M   0B   36M   32036 32036 sleeping *0[1740]      0.00000 0.00000    501 26168     1280   5946      4891       11120      16873      8290       20      25       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81360  Google Chrome He 0.0  00:00.25 18    1    137    27M   0B   24M   32036 32036 sleeping *0[173]       0.00000 0.00000    501 20512     1265   1677      980        3279       3943       2686       22      5        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81349  Google Chrome He 0.0  00:03.58 19    1    217    145M  0B   141M  32036 32036 sleeping *0[2864]      0.00000 0.00000    501 83427     1284   18340     10013      28615      37195      25483      108     49       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81325  PlugInLibrarySer 0.0  00:00.02 2     1    25     1937K 0B   1632K 81325 1     sleeping *0[10]        0.00000 0.00000    501 922       123    115       48         467        236        111        21      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81324  QuickLookUIServi 0.0  00:00.11 3     1    157    6113K 0B   5664K 81324 1     sleeping  0[85]        0.00000 0.00000    501 6947      209    916       312        3004       2576       1900       30      1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81323  com.apple.appkit 0.0  00:04.97 4     2    323    36M   0B   26M   81323 1     sleeping *804[6]       0.00000 0.00000    501 43876     363    54050     23897      106630     88737      36356      5416    17       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81318  Google Chrome He 0.0  00:04.34 21    1    379    125M  0B   121M  32036 32036 sleeping *0[2211]      0.00000 0.00000    501 102786    1288   37849     19356      48179      87754      48927      306     126      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81282  Cursor Helper (R 0.0  01:15.37 22    2    216    326M  0B   133M  76545 76545 sleeping *0[51912]     0.00000 0.00000    501 538192    568    312061    105752     392151     733286     445037     8380    1107     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81276  iconservicesd    0.0  00:00.08 2     1    39     2641K 0B   2336K 81276 1     sleeping *0[10]        0.00000 0.00000    240 1555      135    143       68         1177       292        849        5       1        0.0   0      0      0      _iconservices          N/A    N/A   N/A   N/A   N/A   N/A  
+81275  iconservicesagen 0.0  00:00.53 3     2    83     9089K 0B   8048K 81275 1     sleeping *0[27]        0.00000 0.00000    501 8517      208    3994      2215       22227      3815       6335       630     14       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81274  managedcorespotl 0.0  00:00.31 4     2    55     11M   0B   11M   81274 1     sleeping *0[8]         0.00000 0.00000    501 6320      212    2142      1067       11677      2130       4389       345     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81272  extensionkitserv 0.0  00:01.21 4     3    37     3361K 0B   640K  81272 1     sleeping *0[19]        0.00000 0.00000    501 7019      151    2256      779        59047      4213       9809       83      4        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81271  parsecd          0.0  00:00.58 2     1    71     7025K 0B   6624K 81271 1     sleeping *0[12]        0.00000 0.00000    501 10617     276    427       297        5794       1021       5508       790     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81260  com.apple.hiserv 0.0  00:00.18 2     1    61     2417K 0B   2096K 81260 1     sleeping *0[61]        0.00000 0.00000    501 4021      127    300       1331       6541       604        2097       22      1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81242  CoreServicesUIAg 0.0  00:00.25 3     1    172    10M   0B   9360K 81242 1     sleeping *0[63]        0.00000 0.00000    501 11769     244    940       316        3961       2465       2463       617     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81202  contentlinkingd  0.0  00:00.27 3     2    64     4129K 0B   2224K 81202 1     sleeping *0[119]       0.00000 0.00000    501 9792      172    783       466        5446       2357       3157       92      5        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81162  suggestd         0.0  00:00.98 2     1    185    11M   0B   10M   81162 1     sleeping *0[15]        0.00000 0.00000    501 14105     344    1215      474        14736      3106       7553       1476    3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81091  keyboardservices 0.0  00:00.20 2     1    58     5025K 0B   4656K 81091 1     sleeping *0[2]         0.00000 0.00000    501 2312      179    292       100        3247       660        1000       109     0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81027  com.apple.geod   0.0  00:00.43 3     1    57     6449K 0B   5456K 81027 1     sleeping *0[23]        0.00000 0.00000    0   15359     204    453       220        12910      991        3516       344     51       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+81013  pkd              0.0  00:00.43 2     1    91     5633K 0B   5312K 81013 1     sleeping *0[60]        0.00000 0.00000    501 5614      155    3479      1629       10544      3329       6119       368     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+81012  coreduetd        0.0  00:05.06 2     1    77     6529K 0B   6128K 81012 1     sleeping *0[13]        0.00000 0.00000    0   9707      206    345       126        9152       987        8584       1058    0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80983  CoreLocationAgen 0.0  00:00.23 3     1    150    7441K 0B   6880K 80983 1     sleeping *0[1]         0.00000 0.00000    501 9783      233    738       205        3186       2008       3353       434     2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80982  CommCenter       0.0  00:00.40 7     3    146    6801K 0B   4880K 80982 1     sleeping *0[1]         0.00000 0.00000    501 14002     211    642       314        11436      1858       3834       623     6        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80975  audioanalyticsd  0.0  00:00.52 2     1    54     4385K 0B   3232K 80975 1     sleeping *0[57]        0.00000 0.00000    0   12279     177    291       375        7707       974        4845       586     36       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80968  bird             0.0  00:01.22 2     1    85     7553K 0B   7152K 80968 1     sleeping *13[1]        0.00000 0.00000    501 8304      187    14736     7474       29958      10638      6857       1222    2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80950  Keychain Circle  0.0  00:00.24 3     1    150    6545K 0B   6048K 80950 1     sleeping *0[1]         0.00000 0.00000    501 7297      210    1685      687        4746       6792       4455       54      21       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80767  usermanagerd     0.0  00:00.09 2     1    44     2513K 0B   2240K 80767 1     sleeping *0[54]        0.00000 0.00000    0   2346      125    228       185        2127       548        862        105     1        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80568  callservicesd    0.0  00:01.76 5     2    350    13M   0B   10M   80568 1     sleeping *0[263]       0.00000 0.00000    501 40664     351    6341      3203       30465      16520      22858      2259    10       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80537  accessoryd       0.0  00:00.09 2     1    66     4209K 0B   3840K 80537 1     sleeping *0[1]         0.00000 0.00000    0   1862      162    255       99         1512       498        881        294     0        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80536  BTLEServer       0.0  00:00.24 2     1    51     4289K 0B   3920K 80536 1     sleeping *0[1]         0.00000 0.00000    0   6794      175    296       170        5847       964        2838       313     0        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80535  BTLEServerAgent  0.0  00:00.11 2     1    46     2977K 0B   2672K 80535 1     sleeping *0[1]         0.00000 0.00000    501 4797      143    250       171        1515       846        1934       91      1        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80282  rtcreportingd    0.0  00:00.60 2     1    56     4865K 0B   4240K 80282 1     sleeping *0[1]         0.00000 0.00000    0   17067     185    528       307        15062      1526       5015       280     39       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80113  UIKitSystem      0.0  00:00.54 3     2    96     10M   0B   7888K 80113 1     sleeping *0[114]       0.00000 0.00000    501 20480     310    1601      912        13207      3496       5935       686     22       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80096  StatusKitAgent   0.0  00:00.69 2     1    91     7361K 0B   6976K 80096 1     sleeping *1[26]        0.00000 0.00000    501 14838     212    843       495        14229      3543       5577       516     2        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80087  biomed           0.0  00:00.68 2     1    53     5137K 0B   4768K 80087 1     sleeping *0[332]       0.00000 0.00000    289 12040     195    805       766        12782      2236       3250       450     0        0.0   0      0      0      _biome                 N/A    N/A   N/A   N/A   N/A   N/A  
+80074  proactived       0.0  00:00.67 2     1    77     5361K 0B   4960K 80074 1     sleeping *0[43]        0.00000 0.00000    501 14264     192    661       268        11587      2273       5922       365     3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+80070  swcd             0.0  00:02.24 2     1    44     4065K 0B   3696K 80070 1     sleeping *0[57]        0.00000 0.00000    501 9993      141    554       296        43226      1656       10504      1237    2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79734  Google Chrome He 0.0  00:07.42 19    1    136    53M   0B   43M   32036 32036 sleeping *0[14169]     0.00000 0.00000    501 276884    1548   40651     40701      73436      141477     109013     310     256      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79583  cloudd           0.0  00:14.07 4     1    178    10M   0B   9872K 79583 1     sleeping *0[193]       0.00000 0.00000    501 96776     250    34817     13402      266005     83022      112353     4952    132      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79445  Google Chrome He 0.0  77:07.84 21    1    278    582M  0B   577M  32036 32036 sleeping *0[1135671]   0.00000 0.00000    501 8845703   35198  8940335   3426813    44473464   22223199   35640466   4277    37065    0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79333  Google Chrome He 0.0  00:30.48 18    1    320    281M  0B   264M  32036 32036 sleeping *0[15413]     0.00000 0.00000    501 1276687   1313   125967    68839      222353     300423     273043     2557    372      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79017  Google Chrome He 0.0  00:03.70 19    1    311    112M  0B   109M  32036 32036 sleeping *646[195]     0.00000 0.00000    501 169578    1293   19139     11845      28337      41472      36157      691     100      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+79016  Google Chrome He 0.0  00:23.72 18    1    166    121M  0B   117M  32036 32036 sleeping *0[22712]     0.00000 0.00000    501 298162    1301   124342    71725      178494     262751     148453     1570    449      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+78742  PerfPowerService 0.0  01:12.30 5     2    594    14M   0B   10M   78742 1     sleeping *0[1665]      0.00000 0.00000    0   192479    233    806707    497365     965404     885050     574649     2907    167      0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+78282  milod            0.0  00:02.94 2     1    114    6289K 0B   4768K 78282 1     sleeping *1[2]         0.00000 0.00000    501 60000     204    2335      5265       29813      8929       16674      1460    4        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+78193  com.apple.appkit 0.0  00:14.96 7     3    373    48M   0B   32M   78193 1     sleeping *686[5]       0.00000 0.00000    501 312631    1859   66527     48153      214988     215739     121604     7429    254      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+77827  assistantd       0.0  00:03.41 2     1    195    11M   0B   11M   77827 1     sleeping *0[650]       0.00000 0.00000    501 67139     390    2563      3448       60349      9638       31091      4317    25       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+77820  routined         0.0  00:08.18 2     1    226    14M   0B   14M   77820 1     sleeping *0[69]        0.00000 0.00000    501 155693    313    5292      2666       137776     50462      61576      5535    53       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+77741  networkservicepr 0.0  00:04.74 3     1    122    10M   0B   9952K 77741 1     sleeping *0[109]       0.00000 0.00000    501 88618     249    6799      3227       132958     58533      40381      2267    118      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+77713  ContextStoreAgen 0.0  00:10.36 3     2    98     7761K 0B   5600K 77713 1     sleeping *0[94]        0.00000 0.00000    501 161632    222    10639     6075       191468     35317      112743     1885    45       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+77711  wifip2pd         0.0  00:07.47 2     1    62     5281K 0B   4272K 77711 1     sleeping *0[4643]      0.00000 0.00000    0   74293     187    15486     63947      164539     118437     75897      2713    7        0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+77511  Cursor Helper    0.0  00:05.11 19    1    106    40M   0B   27M   76545 76545 sleeping *1[5]         0.00000 0.00000    501 160853    550    22314     329        77229      75434      67941      2752    1558     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76693  Google Chrome He 0.0  00:02.48 17    1    151    47M   0B   44M   32036 32036 sleeping *0[3200]      0.00000 0.00000    501 176699    1299   13136     8681       15580      27041      29267      367     80       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76584  Cursor Helper    0.0  00:07.50 19    1    116    68M   0B   58M   76545 76545 sleeping *1[226]       0.00000 0.00000    501 341972    542    7821      2613       138613     33758      71715      1059    1056     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76555  Cursor Helper    0.0  00:03.33 11    1    94     14M   0B   11M   76545 76545 sleeping *0[4288]      0.00000 0.00000    501 100333    526    11497     10612      56980      26312      26465      2444    422      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76554  Cursor Helper (G 0.0  00:32.31 16    2    176    334M  23M  24M   76545 76545 sleeping *1[2590]      0.00000 0.00000    501 282897    629    265195    99639      311767     1011616    311894     4174    2030     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76552  chrome_crashpad_ 0.0  00:00.05 4     1    34     2689K 0B   2400K 76551 1     sleeping *0[1]         0.00000 0.00000    501 2657      80     52        18         565        182        423        313     3        0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76545  Cursor           0.0  00:50.86 42    2    526    111M  0B   76M   76545 1     sleeping *0[6412]      0.00000 0.00000    501 907449    1030   624861    144009     552618     1698530    456027     14741   2992     0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76313  Google Chrome He 0.0  00:36.00 20    1    342    264M  0B   244M  32036 32036 sleeping *7488[10552]  0.00000 0.00000    501 1942891   1296   128367    69621      248513     289139     336983     1399    304      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76248  Google Chrome He 0.0  00:23.77 18    1    465    223M  0B   208M  32036 32036 sleeping *14[318]      0.00000 0.00000    501 1139130   1300   41979     24844      116457     94731      134439     1163    282      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76243  Google Chrome He 0.0  00:12.80 19    1    205    83M   0B   79M   32036 32036 sleeping *0[8560]      0.00000 0.00000    501 611054    1302   63973     31714      124284     150346     161266     317     249      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+76033  Google Chrome He 0.0  00:24.52 19    1    231    137M  0B   134M  32036 32036 sleeping *0[28789]     0.00000 0.00000    501 872204    1378   113999    71110      171261     251757     200621     2332    555      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+75421  mobileassetd     0.0  02:25.12 5     3    123    12M   0B   10M   75421 1     sleeping *0[612]       0.00000 0.00000    0   146951    242    28913     14742      1313613    39660      383088     5942    450      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+75358  Google Chrome He 0.0  00:39.43 22    1    1299   520M  0B   514M  32036 32036 sleeping *8707[1991]   0.00000 0.00000    501 1879845   2027   60748     34965      142463     162800     318809     892     294      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+73691  QLPreviewGenerat 0.0  00:01.40 3     1    155    7169K 0B   6784K 73691 1     sleeping  0[1899]      0.00000 0.00000    501 109818    224    7794      2548       15285      22006      19845      30      15       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+72849  tccd             0.0  00:21.23 2     1    64     5377K 0B   5024K 72849 1     sleeping *0[5606]      0.00000 0.00000    501 125570    164    45596     54134      797584     129732     119660     559     20       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+72057  WirelessRadioMan 0.0  00:07.49 3     2    69     4257K 0B   2672K 72057 1     sleeping *0[1]         0.00000 0.00000    0   183854    161    18002     19443      210562     42103      60181      1062    84       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+71197  systemstatusd    0.0  00:04.29 2     1    67     3553K 0B   3232K 71197 1     sleeping *0[920]       0.00000 0.00000    0   163573    140    6189      2264       68936      9233       28436      376     77       0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+68427  AudiovisualThumb 0.0  00:00.59 20    8/5  124    7521K 0B   7104K 68427 1     sleeping *0[1]         0.00000 0.00000    501 15828     241    13241     12209      11065      28377      10605      1667    0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+67298  diskimagesiod    0.0  00:03.31 3     2    81     41M   0B   41M   67298 1     sleeping *0[1]         0.00000 0.00000    271 15152     129    1606      1516       4399       3056       9192       186     0        0.0   0      0      140    _diskimagesiod         N/A    N/A   N/A   N/A   N/A   N/A  
+65752  Telegram         0.0  46:12:24 74    5    4590   1532M 0B   1341M 65752 1     sleeping  0[326384]    0.00000 0.00000    501 896863264 1641   494543663 42577449   2147483647 983125836  1120645061 1220683 1898707  0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+63455  USBAgent         0.0  00:00.06 2     1    32     2129K 0B   1904K 63455 1     sleeping  0[0]         0.00000 0.00000    501 1719      133    136       68         681        328        386        10      0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+62527  distnoted        0.0  00:17.91 3     2    30     1889K 0B   1200K 62527 1     sleeping *0[1]         0.00000 0.00000    265 668298    123    512       107651     1149455    108413     342420     239     1080     0.0   0      0      40     _fpsd                  N/A    N/A   N/A   N/A   N/A   N/A  
+62267  taskgated        0.0  00:02.81 2     1    37     3089K 0B   2832K 62267 1     sleeping *0[1]         0.00000 0.00000    0   90886     136    4231      4529       198626     12398      29148      1108    35       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+62125  TGOnDeviceInfere 0.0  00:12.69 4     3/2  85     20M   0B   18M   62125 1     sleeping *0[1]         0.00000 0.00000    301 385387    300    20563     12192      128477     30507      127518     149993  0        0.0   0      0      0      _modelmanagerd         N/A    N/A   N/A   N/A   N/A   N/A  
+61667  com.apple.WebKit 0.0  00:02.83 16    12/2 172    18M   0B   14M   61667 1     sleeping *5[668]       0.00000 0.00000    501 123724    229    40024     27319      21277      72478      28234      4403    14       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+61664  WebThumbnailExte 0.0  00:06.32 54    51/3 476    17M   0B   16M   61664 1     sleeping *0[1]         0.00000 0.00000    501 142352    312    48586     26882      56941      95874      81611      29416   84       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+61662  OfficeThumbnailE 0.0  00:06.73 3     2/1  51     7793K 0B   7408K 61662 1     sleeping *0[1]         0.00000 0.00000    501 77256     209    1032      733        57648      2859       22247      9390    2        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+61473  SimLaunchHost.ar 0.0  00:00.18 2     1    24     4225K 0B   3952K 61473 1     sleeping *0[1]         0.00000 0.00000    501 9218      138    555       282        1709       1503       2387       842     0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+61464  diskimagesiod    0.0  05:43.72 3     2    81     64M   0B   64M   61464 1     sleeping *0[1]         0.00000 0.00000    271 187084    129    544819    393710     502902     198815     1466236    383     3        0.0   0      0      140    _diskimagesiod         N/A    N/A   N/A   N/A   N/A   N/A  
+61443  diskimagesiod    0.0  00:48.05 3     2    80     33M   0B   32M   61443 1     sleeping *0[1]         0.00000 0.00000    271 78389     129    574674    574583     661927     289919     606616     305     39       0.0   0      0      140    _diskimagesiod         N/A    N/A   N/A   N/A   N/A   N/A  
+60994  remotepairingd   0.0  06:02.30 3     1    92     12M   0B   12M   60994 1     sleeping *0[1]         0.00000 0.00000    501 3481099   214    153821    202110     7895941    311960     3150869    37060   4197     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+60993  CoreDeviceServic 0.0  02:26.63 4     2    133    13M   0B   13M   60993 1     sleeping *0[1]         0.00000 0.00000    501 872938    225    10952     5142       11976193   29499      3862981    28351   1698     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+60333  Google Chrome He 0.0  01:51.57 19    1    260    74M   0B   64M   32036 32036 sleeping *0[219847]    0.00000 0.00000    501 3082525   3114   516274    566874     1108200    1921402    1401781    939     942      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+57076  tipsd            0.0  00:23.52 2     1    118    9665K 0B   9936K 57076 1     sleeping *0[49157]     0.00000 0.00000    501 1267774   284    52829     59715      527872     255616     390716     3152    1598     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+53964  Google Chrome He 0.0  04:37.33 19    1    353    291M  0B   287M  32036 32036 sleeping *0[159468]    0.00000 0.00000    501 11630366  1447   951948    576569     1731256    2268176    2439012    5062    2118     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+53748  Google Chrome He 0.0  03:23.42 19    1    338    295M  0B   290M  32036 32036 sleeping *0[82377]     0.00000 0.00000    501 10721212  1380   577761    347002     1202110    1511798    1986743    3668    1303     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+53719  Google Chrome He 0.0  01:57.87 18    1    209    665M  0B   663M  32036 32036 sleeping *0[91850]     0.00000 0.00000    501 3744456   1371   495564    291309     688449     942365     886046     2674    1334     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+49837  bluetoothuserd   0.0  00:11.73 2     1    87     5809K 0B   5424K 49837 1     sleeping *0[1]         0.00000 0.00000    501 520284    216    6547      23927      220800     35487      98121      3439    222      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+49057  Google Chrome He 0.0  03:31.15 22    1    366    412M  0B   352M  32036 32036 sleeping *0[64707]     0.00000 0.00000    501 12810385  1727   421213    231980     769675     1156676    1805253    5134    1496     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+48092  Google Chrome He 0.0  05:26.82 22    1    807    548M  0B   544M  32036 32036 sleeping *0[46818]     0.00000 0.00000    501 25541208  4074   304486    170179     423807     762713     3926881    10582   2139     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+48088  Google Chrome He 0.0  01:38.09 18    1    245    65M   0B   62M   32036 32036 sleeping *0[111025]    0.00000 0.00000    501 7010628   1557   307771    235161     565427     841579     1129468    889     2055     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+48068  Google Chrome He 0.0  01:23.42 18    1    155    64M   0B   61M   32036 32036 sleeping *0[64764]     0.00000 0.00000    501 5969955   1559   270775    162689     232382     527129     854090     2022    2143     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+48067  Google Chrome He 0.0  03:44.70 18    1    189    120M  0B   117M  32036 32036 sleeping *0[150674]    0.00000 0.00000    501 12356147  22221  496063    309154     840020     1138363    1829367    2519    3815     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+47265  Google Chrome He 0.0  01:14.84 19    1    265    95M   0B   90M   32036 32036 sleeping *0[62420]     0.00000 0.00000    501 3899152   3623   203627    177810     392680     654141     552551     777     1246     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+46756  softwareupdated  0.0  00:36.87 3     1    227    19M   0B   20M   46756 1     sleeping *0[407]       0.00000 0.00000    200 390542    243    308219    153972     354387     224970     184170     7236    799      0.0   0      0      40     _softwareupdate        N/A    N/A   N/A   N/A   N/A   N/A  
+46488  Google Chrome He 0.0  04:07.46 20    1    212    224M  0B   221M  32036 32036 sleeping *0[346446]    0.00000 0.00000    501 17362437  2430   703673    707967     2926473    2323506    3201562    4900    2663     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+42921  Google Chrome He 0.0  02:27.95 18    1    166    203M  0B   200M  32036 32036 sleeping *0[82340]     0.00000 0.00000    501 9484070   1568   291746    177122     364979     641632     1397748    2994    2316     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+42508  Google Chrome He 0.0  00:44.18 19    1    169    88M   0B   85M   32036 32036 sleeping *0[20175]     0.00000 0.00000    501 3142447   1352   71407     41582      85443      168596     378753     1058    642      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+39131  Google Chrome He 0.0  01:09.52 18    1    207    305M  0B   302M  32036 32036 sleeping *285[15482]   0.00000 0.00000    501 4735235   1376   124120    75782      172513     313868     545837     770     891      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+39069  Google Chrome He 0.0  03:58.77 18    1    243    414M  0B   411M  32036 32036 sleeping *0[13418]     0.00000 0.00000    501 4848239   25768  651833    385986     999889     1362586    1181689    1196    1461     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+37892  Google Chrome He 0.0  00:13.50 17    1    162    49M   0B   46M   32036 32036 sleeping *0[13662]     0.00000 0.00000    501 1073164   1356   62156     36579      47415      112522     144803     423     654      0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+37594  Google Chrome He 0.0  05:14.07 20    1    213    265M  0B   261M  32036 32036 sleeping *0[389378]    0.00000 0.00000    501 17829292  2580   889113    849926     3373409    2817746    3455321    4697    4109     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+37190  talagentd        0.0  00:05.00 2     1    136    7985K 0B   7632K 37190 1     sleeping *0[1]         0.00000 0.00000    501 325193    199    26263     6808       41454      77798      136322     752     15       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+35333  lskdd            0.0  00:19.09 3     1    46     3185K 0B   2768K 35333 1     sleeping *0[18]        0.00000 0.00000    265 97614     142    55875     27903      43218      28373      103765     45521   1319     0.0   0      0      40     _fpsd                  N/A    N/A   N/A   N/A   N/A   N/A  
+34948  VTDecoderXPCServ 0.0  00:01.13 3     1    82     7857K 0B   5584K 34948 1     sleeping *34[9]        0.00000 0.00000    501 32507     170    46426     30937      21934      69217      24687      216     0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33893  passd            0.0  00:22.37 2     1    197    10M   0B   9984K 33893 1     sleeping *0[614]       0.00000 0.00000    501 876970    320    27721     24617      284044     80106      270665     44028   1797     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33877  sharingd         0.0  12:17.96 4     1    405    32M   0B   28M   33877 1     sleeping *0[1]         0.00000 0.00000    501 6426942   421    2498775   1930732    10309784   12079621   6355472    104190  6662     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33873  Spotlight        0.0  04:51.60 6     3    671    92M   0B   90M   33873 1     sleeping *0[32846]     0.00000 0.00000    501 11358965  774    1063571   408078     3043991    2186092    2849207    151966  5814     0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33729  Notes            0.0  03:58.71 5     3    357    71M   0B   59M   33729 1     sleeping  0[8681]      0.00000 0.00000    501 4075452   699    598999    118693     7960558    1260491    5401707    55799   74058    0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33439  AMPLibraryAgent  0.0  00:31.63 7     2    127    9681K 0B   7712K 33439 1     sleeping *0[1253]      0.00000 0.00000    501 891221    287    34631     12090      287160     109572     257152     52760   1217     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+33434  Music            0.0  03:01.19 12    1    1433   72M   0B   81M   33434 1     sleeping  0[47011]     0.00000 0.00000    501 4033905   533    1529878   229300     2128192    3804017    3661751    101928  4172     0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32124  Google Chrome He 0.0  02:30.41 15    2    344    46M   0B   41M   32036 32036 sleeping *0[98776]     0.00000 0.00000    501 7974745   1529   422127    315370     2664147    2201416    1705377    24535   11760    0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32123  Google Chrome He 0.0  24:45.80 13    1    198    21M   0B   18M   32036 32036 sleeping *0[98063]     0.00000 0.00000    501 3128055   1298   1517057   284672     55329132   24557923   12369060   22848   86284    0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32060  Google Chrome He 0.0  14:43.56 20    1    146    62M   0B   53M   32036 32036 sleeping *0[1987530]   0.00000 0.00000    501 18944593  11411  4885324   5418896    10440532   18042108   12550866   12371   4952     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32046  Google Chrome He 0.0  03:19.51 12    1    145    47M   0B   45M   32036 32036 sleeping *0[479594]    0.00000 0.00000    501 10784159  9033   1844035   877264     2754296    4470971    2782587    3964    8033     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32045  Google Chrome He 0.0  01:43:09 16    1    266    100M  0B   61M   32036 32036 sleeping *878[180202]  0.00000 0.00000    501 51185208  13822  40210095  15648098   342385396  69187708   60165404   149256  115924   0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32044  Google Chrome He 0.0  06:20:04 18    2    680    1468M 0B   245M  32036 32036 sleeping *1[110195]    0.00000 0.00000    501 75672660  1796   345049232 114232698  246263319  913042174  228132273  170409  682277   0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32039  chrome_crashpad_ 0.0  00:01.15 4     1    34     2881K 0B   2592K 32038 1     sleeping *0[1]         0.00000 0.00000    501 54073     81     53        18         5141       682        9679       7004    12       0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+32036  Google Chrome    0.0  05:44:35 52    1    5330   599M  0B   497M  32036 1     sleeping *4736[165084] 0.00000 0.00000    501 313438040 409136 462953396 122060415  450039235  976650171  216264111  1676658 208700   0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+31936  universalAccessA 0.0  00:35.44 3     1    197    17M   0B   16M   31936 1     sleeping *0[11625]     0.00000 0.00000    501 1717541   281    473697    225435     235475     553543     379133     2504    55       0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+30461  coreauthd        0.0  00:21.92 2     1    183    5393K 0B   5040K 30461 1     sleeping *0[17748]     0.00000 0.00000    501 832725    198    50140     55079      288834     109624     208021     43612   65       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+30138  mbuseragent      0.0  00:00.17 2     1    50     3105K 0B   2832K 30138 1     sleeping *0[1]         0.00000 0.00000    501 3997      160    435       492        2161       2181       2426       391     0        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+30009  backupd          0.0  02:21.79 4     3    47     3841K 0B   2256K 30009 1     sleeping *0[50841]     0.00000 0.00000    0   2399318   154    1112102   678156     3286803    1432437    742288     19343   1047     0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+29736  relatived        0.0  04:50.29 5     3    102    4113K 0B   2512K 29736 1     sleeping *0[942719]    0.00000 0.00000    0   1181307   169    320540    1101092    12181187   2283625    3531903    8092    13248    0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+26177  distnoted        0.0  00:21.20 3     2    30     1921K 0B   1232K 26177 1     sleeping *0[1]         0.00000 0.00000    301 720534    123    608       131009     1397367    131858     411599     7       1261     0.0   0      0      40     _modelmanagerd         N/A    N/A   N/A   N/A   N/A   N/A  
+26175  TGOnDeviceInfere 0.0  00:00.33 3     2/1  62     6769K 0B   6416K 26175 1     sleeping *0[1]         0.00000 0.00000    301 11796     241    1385      877        5325       2246       1492       3500    0        0.0   0      0      0      _modelmanagerd         N/A    N/A   N/A   N/A   N/A   N/A  
+25814  com.apple.Ambien 0.0  14:36.39 3     1    85     5441K 0B   4176K 25814 1     sleeping *0[554171]    0.00000 0.00000    0   990720    157    3121702   2162523    28947354   8316205    8800778    17295   29       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+22164  com.apple.Safari 0.0  00:51.01 3     1    217    15M   0B   15M   22164 1     sleeping *55[3]        0.00000 0.00000    501 2082672   352    218805    84440      451425     653517     674937     32458   432      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+21444  system_installd  0.0  00:06.63 2     1    255    5073K 0B   4720K 21444 1     sleeping *0[204]       0.00000 0.00000    0   65404     172    145812    73897      83092      106397     34351      1282    18       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+21442  installd         0.0  00:05.75 2     1    275    2977K 0B   2656K 21442 1     sleeping *0[196]       0.00000 0.00000    0   43375     141    143548    72205      51988      102850     26242      1247    6        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+18392  distnoted        0.0  00:22.61 3     2    30     1937K 0B   1248K 18392 1     sleeping *0[1]         0.00000 0.00000    296 741747    123    672       139930     1484093    140832     443296     7       1363     0.0   0      0      40     _neuralengine          N/A    N/A   N/A   N/A   N/A   N/A  
+18252  mmaintenanced    0.0  00:04.67 2     1    45     12M   0B   11M   18252 1     sleeping  0[0]         0.00000 0.00000    0   107979    145    5432      4294       42118      16629      32639      10378   9        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+15980  IMAutomaticHisto 0.0  00:02.93 2     1    64     5201K 0B   4864K 15980 1     sleeping  0[0]         0.00000 0.00000    501 117063    205    8869      10378      39490      35107      43019      2171    11       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+15800  siriknowledged   0.0  03:09.22 2     1    262    17M   0B   16M   15800 1     sleeping *0[1403]      0.00000 0.00000    501 1154544   362    172364    71183      2631053    458199     871802     40663   216      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+15742  duetexpertd      0.0  12:40.74 3     2    236    13M   0B   11M   15742 1     sleeping *0[34403]     0.00000 0.00000    501 5424114   399    231351    1769375    11294143   1297875    5230740    706551  778      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+15681  seserviced       0.0  00:00.83 2     1    68     4833K 0B   4496K 15681 1     sleeping *2[1]         0.00000 0.00000    501 27604     192    1352      1137       6713       6457       10705      1119    1        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+12861  Google Chrome He 0.0  08:21.63 21    1    186    285M  0B   277M  32036 32036 sleeping *0[146382]    0.00000 0.00000    501 29027028  12798  1041830   560349     1909273    2751590    4087755    12027   3131     0.0   0      0      180    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+12328  ImageThumbnailEx 0.0  00:07.15 11    8/2  94     7921K 0B   7504K 12328 1     sleeping *0[1]         0.00000 0.00000    501 104866    206    26137     19460      68175      51123      39520      8538    3        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+11306  wifivelocityd    0.0  00:46.46 2     1    70     5425K 0B   5040K 11306 1     sleeping *0[54772]     0.00000 0.00000    0   1045049   200    60979     69166      895454     197235     393337     12356   583      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+7967   FontThumbnailExt 0.0  00:00.24 6     5/1  59     6593K 0B   6288K 7967  1     sleeping *0[1]         0.00000 0.00000    501 4060      175    284       159        4745       738        2197       399     0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+7966   TextThumbnailExt 0.0  00:09.39 4     3/1  67     13M   0B   6512K 7966  1     sleeping *0[1]         0.00000 0.00000    501 113731    237    3808      3574       87121      15721      47091      2165    5        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+7963   PackageThumbnail 0.0  00:03.13 5     4/1  52     4033K 0B   3680K 7963  1     sleeping *0[1]         0.00000 0.00000    501 49932     154    14838     14106      224376     49071      56258      257     4        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+7958   com.apple.quickl 0.0  00:53.44 9     7    217    117M  0B   110M  7958  1     sleeping *3[1472]      0.00000 0.00000    501 964730    228    164318    53994      1237540    345178     650794     37670   191      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+6516   searchpartyusera 0.0  02:21.90 4     2    226    16M   0B   15M   6516  1     sleeping *138267[3035] 0.00000 0.00000    501 2034158   350    209549    242229     3153838    903242     1162833    85827   2210     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+5075   WallpaperImageEx 0.0  00:09.05 2     1    76     9426K 0B   8848K 5075  1     sleeping *0[1]         0.00000 0.00000    501 382138    220    22313     18108      55615      60203      115954     4960    30       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+5062   simdiskimaged    0.0  00:05.43 2     1    75     8961K 0B   8576K 5062  1     sleeping *0[1]         0.00000 0.00000    0   25424     185    140102    3089       145812     6574       146261     2455    1        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+4867   AMPDeviceDiscove 0.0  00:15.36 5     3    251    4449K 0B   2944K 4867  1     sleeping *0[3]         0.00000 0.00000    501 853186    177    16487     9440       179337     64803      199501     3458    223      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+4799   CoreDeviceDDIUpd 0.0  00:00.31 2     1    37     9954K 0B   9504K 4799  1     sleeping *0[1]         0.00000 0.00000    0   7908      177    254       602        8897       1415       3377       149     0        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+4762   MobileDeviceUpda 0.0  00:19.23 5     2    232    11M   0B   10M   4762  1     sleeping *0[21370]     0.00000 0.00000    501 1175611   271    115485    38678      166689     299431     522724     1879    51       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+4529   mdwrite          0.0  00:01.09 2     1    55     3825K 0B   3552K 4529  1     sleeping *0[1]         0.00000 0.00000    501 75949     148    436       3456       20751      6694       22925      521     34       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+4471   ovpnhelper       0.0  00:00.76 2     0    17     2513K 0B   2192K 4471  1     sleeping *0[1]         0.00000 0.00000    0   19843     129    48        21         3952       156        13802      2872    149      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+4468   ovpnagent        0.0  00:02.18 3     1    29     5457K 0B   5088K 4468  1     sleeping *0[1]         0.00000 0.00000    0   104351    11283  4270      1113       38606      5530       24849      3677    196      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+3555   oahd             0.0  00:01.88 2     1    34     2065K 0B   1840K 3555  1     sleeping *0[1]         0.00000 0.00000    441 28778     125    2374      1350       52756      5641       12434      699     5        0.0   0      0      40     _oahd                  N/A    N/A   N/A   N/A   N/A   N/A  
+3480   com.docker.vmnet 0.0  00:02.52 6     0    24     4241K 0B   3712K 3480  1     sleeping *0[1]         0.00000 0.00000    0   156744    134    60        24         18961      168        32732      6693    841      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+3002   UserNotification 0.0  00:42.23 3     1    229    21M   0B   21M   3002  1     sleeping *0[1]         0.00000 0.00000    501 1662180   499    563892    254319     315070     756245     711698     6732    76       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+2915   CharacterPalette 0.0  03:25.75 4     2    596    123M  0B   94M   2915  1     sleeping *0[107125]    0.00000 0.00000    501 7649712   678    1256151   571430     2443941    3196695    2317960    71169   6071     0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+2886   PowerChime       0.0  00:47.69 6     1    309    14M   0B   13M   2886  1     sleeping *0[1]         0.00000 0.00000    501 1954842   302    411601    286464     1314232    1242562    1217092    10911   352      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+2529   trustd           0.0  08:13.55 2     1    174    9121K 0B   5664K 2529  1     sleeping *0[73737]     0.00000 0.00000    501 6591709   172    216803    206739     7007299    2451660    1879906    11632   5379     0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+2509   trustd           0.0  13:09.62 2     1    126    8225K 0B   4832K 2509  1     sleeping *0[99292]     0.00000 0.00000    282 5974335   174    328225    317419     11972930   4633163    1863226    10420   4763     0.0   0      0      0      _trustd                N/A    N/A   N/A   N/A   N/A   N/A  
+2396   distnoted        0.0  00:23.77 3     2    30     1889K 0B   1200K 2396  1     sleeping *0[1]         0.00000 0.00000    294 762759    123    727       150384     1598732    151286     475546     13      1448     0.0   0      0      40     _audiomxd              N/A    N/A   N/A   N/A   N/A   N/A  
+2250   spotlightknowled 0.0  00:02.54 2     1    35     6449K 0B   6064K 2250  1     sleeping  0[0]         0.00000 0.00000    501 84560     158    2240      2697       11878      6775       17012      4633    2        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+2121   CVMServer        0.0  00:00.19 2     1    40     2353K 0B   2112K 2121  1     sleeping *0[1]         0.00000 0.00000    0   9752      121    483       493        3002       1216       2399       389     3        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+2005   storeuid         0.0  00:16.73 3     1    154    9842K 0B   9360K 2005  1     sleeping *0[20578]     0.00000 0.00000    501 1092722   241    108090    36976      149179     282173     493253     251     43       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1898   PasswordBreachAg 0.0  00:11.31 2     1    73     6129K 0B   9392K 1898  1     sleeping  0[0]         0.00000 0.00000    501 570642    197    4761      2029       258891     6003       137180     576     2097     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1890   AppleSpell       0.0  00:57.61 2     1    175    37M   0B   36M   1890  1     sleeping *0[1]         0.00000 0.00000    501 1185095   264    50403     20735      474316     216297     428441     124251  168      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1818   DiskUnmountWatch 0.0  00:00.22 2     1    33     2337K 0B   2096K 1818  1     sleeping  0[0]         0.00000 0.00000    501 7187      135    175       608        3195       1254       2944       279     1        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1740   UniversalControl 0.0  18:56.33 2     1    124    13M   0B   11M   1740  1     sleeping *0[1]         0.00000 0.00000    501 7477828   251    19685142  9890957    21114780   68775339   21471616   74160   55       0.0   0      0      90     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1714   homed            0.0  03:37.83 2     1    234    20M   0B   20M   1714  1     sleeping *0[40603]     0.00000 0.00000    501 4289189   376    1453507   175284     2005893    3149436    3806632    202846  3436     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1688   ctkahp           0.0  00:02.06 2     1    498    3265K 0B   2976K 1688  1     sleeping *0[627]       0.00000 0.00000    501 101082    130    2995      2487       22724      11292      23755      3219    9        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1684   CursorUIViewServ 0.0  05:44.14 3     1    256    41M   0B   36M   1684  1     sleeping *0[84128]     0.00000 0.00000    501 10804842  239    5346886   1426477    4373269    9752333    3466888    26705   2023     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1682   ctkahp           0.0  00:02.05 2     1    36     2545K 0B   2304K 1682  1     sleeping *0[590]       0.00000 0.00000    0   104236    125    4207      3060       53404      15025      37819      1534    11       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+1680   TextInputMenuAge 0.0  01:27.94 4     2    214    24M   0B   20M   1680  1     sleeping *0[29849]     0.00000 0.00000    501 4140434   389    833757    230169     1332051    2058695    1424114    6533    5344     0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1679   AirPlayUIAgent   0.0  00:34.79 4     2    234    20M   0B   19M   1679  1     sleeping *18[8832]     0.00000 0.00000    501 1734488   304    328090    156566     276468     775970     477563     3339    80       0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1676   icdd             0.0  00:12.66 2     1    66     4065K 0B   3776K 1676  1     sleeping *0[1]         0.00000 0.00000    501 258297    148    21220     12684      266797     85227      126889     3173    91       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1674   imklaunchagent   0.0  00:16.00 2     1    116    8418K 0B   8000K 1674  1     sleeping *1[14]        0.00000 0.00000    501 419553    171    14756     13533      89083      63435      110503     8552    8        0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1670   com.apple.CloudD 0.0  00:06.17 2     1    69     4881K 0B   4528K 1670  1     sleeping *0[1]         0.00000 0.00000    501 135678    180    56931     32778      199199     70207      73584      6820    20       0.0   0      0      90     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1665   com.apple.dock.e 0.0  04:33.29 3     1    199    19M   0B   18M   1665  1     sleeping *0[13094]     0.00000 0.00000    501 8304312   479    202234    80355      437409     608774     798995     32297   745      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1657   automountd       0.0  00:01.24 4     1    25     2609K 0B   2336K 1657  1     sleeping *0[1]         0.00000 0.00000    0   16338     156    105       65         8257       273        9664       2603    155      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+1656   WallpaperVideoEx 0.0  87:10.85 7     3    97     15M   0B   40M   1656  1     sleeping *0[1]         0.00000 0.00000    501 14898845  231    14553385  8921468    59137466   26138874   36162752   216632  160269   0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1651   Finder           0.0  29:50.56 7     4    663    119M  0B   83M   1651  1     sleeping *14[754]      0.00000 0.00000    501 26018151  623    3154121   3334335    8543235    17759421   8153379    190598  6911     0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1650   SystemUIServer   0.0  00:26.37 3     1    181    13M   0B   13M   1650  1     sleeping *0[12975]     0.00000 0.00000    501 1663672   262    174863    71688      228284     396209     469003     5797    84       0.0   0      0      80     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1649   Dock             0.0  06:54.66 5     3    1320   110M  0B   96M   1649  1     sleeping *1[9161]      0.00000 0.00000    501 10984249  348    4303180   911459     5261670    9143756    4494384    258526  11907    0.0   0      0      80     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1616   commerce         0.0  00:14.07 3     1    81     7761K 0B   7568K 1616  1     sleeping *0[286]       0.00000 0.00000    501 744648    208    6820      7801       252092     30969      176719     6139    2144     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1609   fbahelperd       0.0  00:00.33 2     1    27     2801K 0B   2528K 1609  1     sleeping *0[1]         0.00000 0.00000    0   12164     148    407       837        7186       1774       4137       163     0        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+1400   fontd            0.0  05:29.19 2     1    166    12M   0B   11M   1400  1     sleeping *0[89889]     0.00000 0.00000    501 5399570   143    210006    207520     2297548    511790     2266073    7352    869      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1393   csimporter       0.0  00:05.70 3     2    59     11M   0B   10M   1393  1     sleeping *0[1]         0.00000 0.00000    501 8955      200    1844      1021       59273      3698       18356      51      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1359   com.apple.mail.S 0.0  00:00.05 3     2    54     3681K 0B   3408K 1359  1     sleeping *0[1]         0.00000 0.00000    501 1214      168    184       72         706        392        169        11      0        0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1327   avconferenced    0.0  50:15.82 6     2    250    15M   0B   14M   1327  1     sleeping *0[1]         0.00000 0.00000    501 2534524   320    20012427  14058028   62037096   35445378   31843918   31073   44674    0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1317   fairplayd        0.0  00:06.87 2     1    50     3297K 0B   3040K 1317  1     sleeping *0[1]         0.00000 0.00000    265 55225     163    1181      378        7691       7211       34302      37873   2        0.0   0      0      40     _fpsd                  N/A    N/A   N/A   N/A   N/A   N/A  
+1315   mediaremoteagent 0.0  00:18.68 2     1    35     2305K 0B   2048K 1315  1     sleeping *0[34251]     0.00000 0.00000    501 412487    132    178       42249      848740     42492      248878     155     192      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1314   useractivityd    0.0  01:40.53 4     1    120    5649K 0B   5280K 1314  1     sleeping *0[44255]     0.00000 0.00000    501 2759623   173    174737    161547     2026896    671386     1427371    20723   2556     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1287   WallpaperAgent   0.0  01:13.38 3     1    195    16M   0B   16M   1287  1     sleeping *311[37]      0.00000 0.00000    501 2632591   362    254185    81154      592277     680007     1104293    98942   230      0.0   0      0      80     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1286   diagnostics_agen 0.0  00:35.23 3     2    114    6193K 0B   3776K 1286  1     sleeping  0[0]         0.00000 0.00000    501 1816319   210    17015     32827      487753     72351      496178     10595   361      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1282   storedownloadd   0.0  00:02.12 2     1    41     3537K 0B   3216K 1282  1     sleeping *0[116]       0.00000 0.00000    501 72890     153    1793      2232       20732      6096       20681      3212    8        0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1253   audioaccessoryd  0.0  05:55.88 7     4    335    10M   0B   8880K 1253  1     sleeping *1[233]       0.00000 0.00000    501 4430273   307    800486    674582     5461454    2330964    3297835    68823   5324     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1249   ViewBridgeAuxili 0.0  01:43.38 3     2    211    8370K 0B   6720K 1249  1     sleeping *0[322259]    0.00000 0.00000    501 2907979   172    1266170   585514     1584617    3097184    1542581    2791    511      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1200   WindowManager    0.0  16:52.02 5     2    261    23M   0B   17M   1200  1     sleeping *0[156410]    0.00000 0.00000    501 12142230  252    2723109   875728     4697926    9322299    3812067    69372   2454     0.0   0      0      80     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1195   NotificationCent 0.0  16:20.34 9     3    552    67M   0B   65M   1195  1     sleeping *2853[5879]   0.00000 0.00000    501 11487097  666    3809377   1221603    6024869    13335255   5748053    258957  16925    0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1192   imagent          0.0  02:43.01 5     4    247    15M   0B   14M   1192  1     sleeping *0[1]         0.00000 0.00000    501 3523324   462    284560    112616     2479744    1100946    1514272    88434   4592     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1156   peopled          0.0  00:24.40 2     1    164    12M   0B   11M   1156  1     sleeping *0[73617]     0.00000 0.00000    501 494951    319    50022     11492      318554     165065     224825     5131    155      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1147   ContinuityCaptur 0.0  10:56.35 7     3    313    13M   0B   11M   1147  1     sleeping *0[943961]    0.00000 0.00000    501 2964179   320    1022777   1576730    14350488   3864921    6319953    49060   32187    0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1142   fontworker       0.0  00:03.68 2     1    43     25M   0B   25M   1142  1     sleeping *0[1]         0.00000 0.00000    501 35961     157    445       746        100272     2223       12252      17      15       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1137   ControlCenter    0.0  58:14.01 9     3    662    84M   0B   74M   1137  1     sleeping *0[628778]    0.00000 0.00000    501 28534950  755    55854028  9779527    28787765   104440113  37241144   448629  66450    0.0   0      0      80     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1125   sharedfilelistd  0.0  00:26.59 3     2    95     5185K 0B   2224K 1125  1     sleeping *0[9037]      0.00000 0.00000    501 1966477   165    40541     32210      1691518    121430     248923     5811    296      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1123   BiomeAgent       0.0  08:01.65 2     1    219    10M   0B   9680K 1123  1     sleeping *0[74622]     0.00000 0.00000    501 4191284   332    356426    340917     11138272   1310951    3147027    237334  274      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1117   corespotlightd   0.0  09:09.45 3     1    286    37M   0B   36M   1117  1     sleeping *156[1]       0.00000 0.00000    501 7108904   3294   1979142   1330281    16745856   5997409    6239303    223200  3563     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1106   familycircled    0.0  00:22.18 3     1    124    7201K 0B   7024K 1106  1     sleeping *0[1722]      0.00000 0.00000    501 1337638   240    20114     20117      454267     75075      284525     14297   2945     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1105   fileproviderd    0.0  03:32.27 4     3    188    20M   0B   19M   1105  1     sleeping *130[94]      0.00000 0.00000    501 1964281   326    125450    99399      4987939    347722     3344104    152983  42958    0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1103   identityservices 0.0  56:20.87 8     4    1093   21M   0B   14M   1103  1     sleeping *0[1]         0.00000 0.00000    501 8648180   373    835094    524588     53250043   16924512   11520608   228745  6588     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1099   containermanager 0.0  01:39.37 2     1    41     11M   0B   10M   1099  1     sleeping *0[53901]     0.00000 0.00000    501 1699384   134    438443    284220     2733799    582677     490471     25890   76       0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1097   usernotification 0.0  01:03.04 2     1    198    8737K 0B   8336K 1097  1     sleeping *13[2593]     0.00000 0.00000    501 2441352   251    162180    146596     1009914    455567     530865     38127   222      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1096   accountsd        0.0  06:37.09 4     1    385    31M   0B   30M   1096  1     sleeping *0[35084]     0.00000 0.00000    501 5429487   590    494241    312557     7151135    3114293    2323831    91560   3197     0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1093   corespeechd      0.0  01:32.43 4     1    215    8833K 0B   8464K 1093  1     sleeping *0[1]         0.00000 0.00000    501 2279753   273    1606631   655186     2234605    2662920    1804759    51249   728      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1088   siriinferenced   0.0  00:14.13 2     1    66     11M   0B   10M   1088  1     sleeping *0[73609]     0.00000 0.00000    501 599150    354    4826      3131       71379      14287      146406     21134   69       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1085   WiFiAgent        0.0  13:18.17 4     1    339    23M   0B   22M   1085  1     sleeping *0[75684]     0.00000 0.00000    501 5152148   716    3555864   1517269    3713331    5283533    3521421    21083   1262     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1084   secd             0.0  07:42.04 2     1    214    11M   0B   12M   1084  1     sleeping *0[1]         0.00000 0.00000    501 4666456   237    1594482   979391     8502165    2825072    2261199    81922   412      0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1079   usernoted        0.0  01:33.22 2     1    307    13M   0B   13M   1079  1     sleeping *0[1]         0.00000 0.00000    501 3109570   314    122139    109427     1332121    319959     739273     89034   356      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1078   nsurlsessiond    0.0  04:02.45 8     5    130    10M   0B   10M   1078  1     sleeping *0[8057]      0.00000 0.00000    501 4073942   216    296529    165516     5056847    599481     2238609    23148   10318    0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1077   rapportd         0.0  05:03.80 2     1    251    10M   0B   8928K 1077  1     sleeping *0[1]         0.00000 0.00000    501 4083157   258    967850    644842     4198296    3131335    2092774    86012   1399     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1072   pboard           0.0  00:20.41 3     2    131    4081K 0B   2368K 1072  1     sleeping *0[1]         0.00000 0.00000    501 1228020   135    136241    145404     954340     300262     352698     3055    388      0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1069   universalaccessd 0.0  01:13.00 5     2    205    13M   0B   10M   1069  1     sleeping *1[35]        0.00000 0.00000    501 2664340   217    620362    380085     1984876    1876420    1626339    3911    548      0.0   0      0      100    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1066   UserEventAgent   0.0  10:59.50 2     1    1414   9665K 0B   9344K 1066  1     sleeping *0[1]         0.00000 0.00000    501 3119136   224    2067078   1378185    17222087   8284990    2979906    14692   7212     0.0   0      0      150    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1044   loginwindow      0.0  10:36.70 8     4    920    51M   0B   40M   1044  1     sleeping *0[91475]     0.00000 0.00000    501 12286389  15295  2854792   1098100    7493825    11616651   6590189    239131  34068    0.0   0      0      160    saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1033   lsd              0.0  02:53.12 3     2    497    8465K 0B   5200K 1033  1     sleeping *0[80986]     0.00000 0.00000    501 4648797   38625  695508    596621     5297353    1580841    1211401    39887   1307     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1031   cfprefsd         0.0  07:34.39 3     2    408    4145K 0B   3200K 1031  1     sleeping *0[293662]    0.00000 0.00000    501 4077967   125    963581    1015626    18801213   2414935    2881371    234     1793     0.0   0      0      0      saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1030   mdbulkimport     0.0  01:18.25 2     1    56     6817K 0B   6512K 1030  1     sleeping *0[1]         0.00000 0.00000    501 434718    175    37871     18527      2121751    65224      247748     6097    29       0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+1029   distnoted        0.0  07:04.26 3     2    362    5473K 0B   3136K 1029  1     sleeping *0[1]         0.00000 0.00000    501 3013072   123    6273033   1202019    15703947   8809067    5821727    76      1108     0.0   0      0      40     saydulloismatov        N/A    N/A   N/A   N/A   N/A   N/A  
+931    distnoted        0.0  00:23.85 3     2    30     1905K 0B   1216K 931   1     sleeping *0[1]         0.00000 0.00000    277 763004    123    722       151340     1609478    152255     480434     3       1449     0.0   0      0      40     _rmd                   N/A    N/A   N/A   N/A   N/A   N/A  
+676    CrashReporterSup 0.0  00:00.24 2     1    36     2417K 0B   2176K 676   1     sleeping  0[0]         0.00000 0.00000    0   7759      126    561       666        4560       2632       3721       68      2        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+671    distnoted        0.0  00:23.91 3     2    30     1873K 0B   1184K 671   1     sleeping *0[1]         0.00000 0.00000    235 762930    123    748       151409     1610597    152339     481671     3       1446     0.0   0      0      40     _assetcache            N/A    N/A   N/A   N/A   N/A   N/A  
+662    filecoordination 0.0  00:37.21 4     3    92     5601K 0B   2800K 662   1     sleeping *0[1]         0.00000 0.00000    0   1362341   140    110685    95854      1129233    308214     577759     12743   1098     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+655    distnoted        0.0  00:24.20 3     2    31     1937K 0B   1216K 655   1     sleeping *0[1]         0.00000 0.00000    247 763688    123    723       151413     1610722    152338     482184     3       1447     0.0   0      0      40     _gamecontrollerd       N/A    N/A   N/A   N/A   N/A   N/A  
+635    nearbyd          0.0  08:19.27 7     5    104    5793K 0B   3792K 635   1     sleeping *4[168]       0.00000 0.00000    268 3723636   179    212370    843083     12602446   1441173    3997134    26617   9432     0.0   0      0      40     _nearbyd               N/A    N/A   N/A   N/A   N/A   N/A  
+587    ctkd             0.0  00:01.06 2     1    33     3025K 0B   2736K 587   1     sleeping *0[247]       0.00000 0.00000    259 56727     133    2612      2980       13877      6073       16181      465     17       0.0   0      0      40     _ctkd                  N/A    N/A   N/A   N/A   N/A   N/A  
+583    distnoted        0.0  00:24.11 3     2    30     1905K 0B   1216K 583   1     sleeping *0[1]         0.00000 0.00000    260 763067    123    733       151425     1610751    152355     482396     2       1448     0.0   0      0      40     _applepay              N/A    N/A   N/A   N/A   N/A   N/A  
+542    distnoted        0.0  00:24.27 3     2    31     1953K 0B   1248K 542   1     sleeping *0[1]         0.00000 0.00000    55  764307    123    724       151437     1611376    152365     482717     2       1448     0.0   0      0      40     _appleevents           N/A    N/A   N/A   N/A   N/A   N/A  
+524    awdd             0.0  00:03.45 2     1    54     2993K 0B   2720K 524   1     sleeping *0[268]       0.00000 0.00000    0   88585     133    4155      4092       25759      12369      37588      8479    46       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+461    coreauthd        0.0  00:08.05 2     1    90     5265K 0B   4912K 461   1     sleeping *0[3503]      0.00000 0.00000    0   375312    191    32390     21209      170274     66400      109097     8862    36       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+401    aned             0.0  02:09.87 3     1    100    4497K 0B   4208K 401   1     sleeping *0[3321]      0.00000 0.00000    0   1154551   152    68088     43769      3729928    89222      627752     102169  104      0.0   0      0      140    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+399    distnoted        0.0  00:24.08 3     2    31     1921K 0B   1216K 399   1     sleeping *0[1]         0.00000 0.00000    273 764015    122    720       151460     1611444    152397     482315     2       1451     0.0   0      0      40     _appinstalld           N/A    N/A   N/A   N/A   N/A   N/A  
+387    appleeventsd     0.0  00:15.46 4     3    308    3409K 0B   1632K 387   1     sleeping *0[7096]      0.00000 0.00000    55  1248350   142    117849    69772      565578     279828     232280     4383    244      0.0   0      0      40     _appleevents           N/A    N/A   N/A   N/A   N/A   N/A  
+386    SubmitDiagInfo   0.0  00:01.85 2     1    57     3793K 0B   3472K 386   1     sleeping  0[0]         0.00000 0.00000    0   58984     157    2744      2343       31868      10310      22212      896     8        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+379    gamepolicyd      0.0  04:19.24 4     3    171    5553K 0B   2368K 379   1     sleeping *0[152324]    0.00000 0.00000    0   3924948   158    583544    486479     7495506    1190725    3226222    22368   8017     0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+377    systemstats      0.0  00:21.82 5     2    139    3537K 0B   3232K 30    30    sleeping  0[0]         0.00000 0.00000    0   891875    81     241653    204108     770704     748343     612836     3282    454      0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+375    mdbulkimport     0.0  00:00.69 2     1    44     5873K 0B   5584K 375   1     sleeping *0[1]         0.00000 0.00000    89  6480      159    367       670        18636      1444       2865       37      0        0.0   0      0      40     _spotlight             N/A    N/A   N/A   N/A   N/A   N/A  
+373    distnoted        0.0  00:24.17 3     2    31     1905K 0B   1200K 373   1     sleeping *0[1]         0.00000 0.00000    89  764135    122    761       151481     1611898    152425     481188     2       1450     0.0   0      0      40     _spotlight             N/A    N/A   N/A   N/A   N/A   N/A  
+338    mds_stores       0.0  03:21:43 5     3    127    142M  0B   132M  338   1     sleeping *0[1]         0.00000 0.00000    0   78516453  3971   5688782   8956664    329760523  20310512   78067344   1213524 2489     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+324    distnoted        0.0  00:24.23 3     2    30     1953K 0B   1248K 324   1     sleeping *0[1]         0.00000 0.00000    242 763658    122    721       151461     1612287    152382     477175     2       1452     0.0   0      0      40     _nsurlsessiond         N/A    N/A   N/A   N/A   N/A   N/A  
+266    locationd        0.0  37:49.73 6     3    285    10M   0B   8288K 266   1     sleeping *0[197421]    0.00000 0.00000    205 9414703   265    2744809   2395824    36821103   14437005   12916026   572018  44045    0.0   0      0      40     _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+260    distnoted        0.0  00:24.51 3     2    30     1889K 0B   1200K 260   1     sleeping *0[1]         0.00000 0.00000    278 764225    122    756       151471     1612183    152402     476744     2       1450     0.0   0      0      40     _accessoryupdater      N/A    N/A   N/A   N/A   N/A   N/A  
+245    wifianalyticsd   0.0  02:11.13 2     1    82     17M   0B   17M   245   1     sleeping *0[1125]      0.00000 0.00000    0   623651    194    53340     18938      474532     111404     275814     22988   176      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+243    audioclocksyncd  0.0  15:57.25 6     5    60     5841K 0B   3584K 243   1     sleeping *0[1]         0.00000 0.00000    0   1252252   125    6452279   9622452    22625697   19858125   12956076   4392    383      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+242    searchpartyd     0.0  14:29.26 3     1    120    10M   0B   9760K 242   1     sleeping *0[224992]    0.00000 0.00000    0   7472612   285    349559    336763     28933024   1692014    7598885    170029  2268     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+232    distnoted        0.0  00:24.79 3     2    30     1905K 0B   1200K 232   1     sleeping *0[1]         0.00000 0.00000    200 779083    122    785       151583     1606727    152633     478499     4       1452     0.0   0      0      40     _softwareupdate        N/A    N/A   N/A   N/A   N/A   N/A  
+200    UVCAssistant     0.0  00:07.74 2     1    83     5745K 0B   5472K 200   1     sleeping *0[1]         0.00000 0.00000    262 344808    168    24736     22700      108790     76178      184463     4071    93       0.0   0      0      40     _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+199    cameracaptured   0.0  00:00.91 2     1    69     3457K 0B   3200K 199   1     sleeping *0[1]         0.00000 0.00000    262 45872     153    2979      1701       18338      9731       12960      1115    9        0.0   0      0      40     _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+198    appleh13camerad  0.0  02:21.84 6     3    111    12M   0B   4560K 198   1     sleeping *0[1]         0.00000 0.00000    262 401718    185    1926572   1350764    3241708    3279258    1763723    7789    17684    0.0   0      0      140    _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+180    mDNSResponderHel 0.0  00:24.87 3     1    45     3217K 0B   2800K 180   1     sleeping *0[1]         0.00000 0.00000    0   129628    137    1094139   547668     570220     553444     615036     333     29541    0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+171    socketfilterfw   0.0  00:00.37 2     1    52     3217K 0B   2944K 171   1     sleeping *0[127]       0.00000 0.00000    0   16987     138    881       910        5970       3549       6260       286     2        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+165    nsurlsessiond    0.0  14:35.72 6     5    91     7569K 0B   22M   165   1     sleeping *0[17700]     0.00000 0.00000    242 4187135   204    2891471   771888     24884552   3177786    9024075    8641    14316    0.0   0      0      40     _nsurlsessiond         N/A    N/A   N/A   N/A   N/A   N/A  
+164    apfsd            0.0  00:10.95 2     1    81     4161K 0B   3904K 164   1     sleeping *0[1]         0.00000 0.00000    0   148107    141    121598    6530       557324     186257     174355     961     5        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+162    com.apple.AppleU 0.0  00:10.73 2     1    106    1040K 0B   864K  162   1     sleeping  0[1]         0.00000 0.00000    270 329970    79     143235    93092      162305     167188     96476      5518    45       0.0   0      0      150    _driverkit             N/A    N/A   N/A   N/A   N/A   N/A  
+160    com.apple.Driver 0.0  02:17:05 6     4    1455   31M   0B   5840K 160   1     sleeping  0[1]         0.00000 0.00000    270 19885131  81     43556095  40147556   160103333  132927840  122439754  68393   12171402 0.0   0      0      150    _driverkit             N/A    N/A   N/A   N/A   N/A   N/A  
+159    com.apple.Driver 0.0  00:01.49 2     1    65     752K  0B   624K  159   1     sleeping  0[1]         0.00000 0.00000    270 32767     79     22678     15087      15353      15239      57465      639     0        0.0   0      0      150    _driverkit             N/A    N/A   N/A   N/A   N/A   N/A  
+158    modelmanagerd    0.0  01:16.73 2     1    76     9489K 0B   9120K 158   1     sleeping *5[95]        0.00000 0.00000    301 399217    243    37010     26994      1083181    84713      217252     31083   44       0.0   0      0      85     _modelmanagerd         N/A    N/A   N/A   N/A   N/A   N/A  
+157    suhelperd        0.0  00:02.33 2     1    63     20M   0B   20M   157   1     sleeping *0[810]       0.00000 0.00000    0   128584    166    3351      6102       57029      15740      33412      521     61       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+155    distnoted        0.0  00:24.49 3     2    30     1905K 0B   1216K 155   1     sleeping *0[1]         0.00000 0.00000    262 764835    122    734       151487     1612605    152413     479363     2       1451     0.0   0      0      40     _cmiodalassistants     N/A    N/A   N/A   N/A   N/A   N/A  
+148    distnoted        0.0  00:25.01 3     2    31     1889K 0B   1168K 148   1     sleeping *0[1]         0.00000 0.00000    205 778533    122    748       151488     1612962    152403     474251     2       1451     0.0   0      0      40     _locationd             N/A    N/A   N/A   N/A   N/A   N/A  
+142    syspolicyd       0.0  04:17.48 7     5    253    61M   0B   54M   142   1     sleeping *0[1]         0.00000 0.00000    0   2832019   222    246894    166436     13874205   721013     1553001    169317  4292     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+132    distnoted        0.0  00:25.55 3     2    30     1937K 0B   1232K 132   1     sleeping *0[1]         0.00000 0.00000    88  764195    122    713       151500     1613289    152440     475939     2       1449     0.0   0      0      40     _windowserver          N/A    N/A   N/A   N/A   N/A   N/A  
+125    eligibilityd     0.0  00:46.44 2     1    53     4129K 0B   3760K 125   1     sleeping *0[2409]      0.00000 0.00000    0   721337    167    83449     23957      1092850    160765     220215     13764   182      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+124    distnoted        0.0  00:26.86 3     2    30     1953K 0B   1232K 124   1     sleeping *0[1]         0.00000 0.00000    202 780468    122    718       151496     1613884    152432     496520     2       1451     0.0   0      0      40     _coreaudiod            N/A    N/A   N/A   N/A   N/A   N/A  
+119    mDNSResponder    0.0  23:28.24 5     3    141    8561K 0B   5728K 119   1     sleeping *0[1]         0.00000 0.00000    65  4890379   200    1706221   597483     44632194   2887695    12675582   46028   198886   0.0   0      0      40     _mdnsresponder         N/A    N/A   N/A   N/A   N/A   N/A  
+118    distnoted        0.0  00:26.77 3     2    32     2049K 0B   1248K 118   1     sleeping *0[1]         0.00000 0.00000    0   804379    122    887       151830     1610974    153178     491477     3       1449     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+114    authd            0.0  02:05.33 3     2    109    5521K 0B   5056K 114   1     sleeping *0[353682]    0.00000 0.00000    0   978165    247    416940    388825     5033835    1066708    1142060    18165   128      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+113    symptomsd        0.0  09:33.42 3     2    170    8033K 0B   4352K 113   1     sleeping *0[37651]     0.00000 0.00000    24  4175535   190    348141    209416     22382664   1045034    5818944    61905   711      0.0   0      0      140    _networkd              N/A    N/A   N/A   N/A   N/A   N/A  
+110    lsd              0.0  01:43.09 2     1    134    10M   0B   9712K 110   1     sleeping *0[10613]     0.00000 0.00000    0   1682152   12097  52884     44024      1770878    105331     533097     127064  119      0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+106    coreaudiod       0.0  04:09:50 11    4    11048  23M   0B   20M   106   1     sleeping *0[1]         0.00000 0.00000    202 6129979   513    14464679  10436962   114400493  51429682   54425194   227084  770311   0.0   0      0      120    _coreaudiod            N/A    N/A   N/A   N/A   N/A   N/A  
+104    airportd         0.0  02:11:12 9     7    376    16M   0B   10M   104   1     sleeping *0[35063]     0.00000 0.00000    0   26718205  251    33963827  16918257   165785197  45261057   59336969   156298  10078    0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+101    analyticsd       0.0  02:24.18 2     1    528    7121K 0B   7232K 101   1     sleeping *7848[4]      0.00000 0.00000    263 3807807   204    1657316   925704     3318184    1922360    1607092    20570   667      0.0   0      0      140    _analyticsd            N/A    N/A   N/A   N/A   N/A   N/A  
+98     coreservicesd    0.0  00:31.43 4     3    598    11M   0B   8976K 98    1     sleeping *0[1]         0.00000 0.00000    0   1307335   125    1153092   686850     1133025    1308534    392388     3664    26       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+97     contextstored    0.0  26:28.25 3     2    156    7441K 0B   5328K 97    1     sleeping *0[2389843]   0.00000 0.00000    0   4046311   202    5764312   5443244    56594191   11843932   15349570   37316   3386     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+96     runningboardd    0.0  34:32.49 6     5    563    10M   0B   3504K 96    1     sleeping *0[165929]    0.00000 0.00000    0   9607952   161    4310068   3670427    57606863   9621878    15390913   13165   12567    0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+92     cfprefsd         0.0  08:03.12 3     2    649    4321K 0B   2096K 92    1     sleeping *0[426371]    0.00000 0.00000    0   4126114   122    1101884   1149634    18684251   2721650    3010940    171     2062     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+91     tccd             0.0  04:52.19 3     2    71     7105K 0B   3264K 91    1     sleeping *0[34781]     0.00000 0.00000    0   3726224   188    387979    410437     13217386   1165126    1629975    12399   382      0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+90     WindowServer     0.0  30:12:08 20    5    5562   2509M 0B   2023M 90    1     sleeping *0[1]         0.00000 0.00000    88  346499710 121067 600519330 1208518068 2147483647 2147483647 628934925  111004  7099108  0.0   0      0      170    _windowserver          N/A    N/A   N/A   N/A   N/A   N/A  
+88     com.apple.cmio.r 0.0  01:01.47 3     2    155    32M   0B   6320K 88    1     sleeping *0[81174]     0.00000 0.00000    0   1042034   211    145623    129805     1243452    290408     608414     14370   5064     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+87     AirPlayXPCHelper 0.0  15:41.20 7     3    300    26M   0B   24M   87    1     sleeping *0[1]         0.00000 0.00000    0   3069936   256    15040984  15061739   110222926  59649063   48143748   34844   4116     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+86     corebrightnessd  0.0  19:58.58 5     4    144    5073K 0B   2512K 86    1     sleeping *0[1]         0.00000 0.00000    0   3388510   182    4353036   2834822    37191491   8332418    13076625   18637   81174    0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+84     notifyd          0.0  06:17.74 2     1    986    4193K 0B   1392K 84    1     sleeping *0[1]         0.00000 0.00000    0   2919381   85     4665652   6026007    22618869   11290905   6029285    150     96       0.0   0      0      200    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+80     KernelEventAgent 0.0  00:00.17 2     1    22     1681K 0B   1456K 80    1     sleeping *0[1]         0.00000 0.00000    0   4596      122    363       27         17504      440        2026       121     2        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+79     revisiond        0.0  00:02.11 3     1    69     4385K 0B   4096K 79    1     sleeping *0[100]       0.00000 0.00000    0   64277     155    1957      1886       15707      8723       25644      3990    14       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+78     logind           0.0  00:06.32 2     1    100    3121K 0B   2848K 78    1     sleeping *0[1]         0.00000 0.00000    0   464126    303    11494     13298      157198     32951      60977      4620    101      0.0   0      0      90     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+74     distnoted        0.0  03:11.53 3     2    181    2497K 0B   1184K 74    1     sleeping *0[1]         0.00000 0.00000    241 1594449   122    3460715   478122     3601650    3960490    2510212    51      1378     0.0   0      0      40     _distnote              N/A    N/A   N/A   N/A   N/A   N/A  
+72     dasd             0.0  39:16.32 3     2    323    9665K 0B   8576K 72    1     sleeping *0[29959]     0.00000 0.00000    0   6589478   209    1059709   923501     32282201   2627656    6953377    27708   4002     0.0   0      0      140    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+71     autofsd          0.0  00:00.24 2     1    24     1697K 0B   1488K 71    1     sleeping *0[1]         0.00000 0.00000    0   4114      121    76        168        1588       435        2469       225     2        0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+66     securityd        0.0  01:10.61 5     1    129    8289K 0B   7344K 66    1     sleeping *0[1]         0.00000 0.00000    0   1673200   142    263858    6382       1125430    1478174    573964     15968   242      0.0   0      0      140    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+65     usbmuxd          0.0  00:24.54 3     1    46     4257K 0B   3984K 65    1     sleeping *0[1]         0.00000 0.00000    213 369145    154    54258     23343      377923     234304     171894     13031   76       0.0   0      0      40     _usbmuxd               N/A    N/A   N/A   N/A   N/A   N/A  
+64     timed            0.0  00:44.35 2     1    60     3745K 0B   3456K 64    1     sleeping *0[1]         0.00000 0.00000    266 790082    145    64406     37953      1042195    102168     390196     9300    131      0.0   0      0      140    _timed                 N/A    N/A   N/A   N/A   N/A   N/A  
+63     launchservicesd  0.0  04:45.40 6     5    455    12M   0B   6576K 63    1     sleeping *0[772415]    0.00000 0.00000    0   5528024   145    4579090   2882456    8209543    5776671    3226488    4692    1691     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+62     apsd             0.0  05:11.03 3     1    353    10M   0B   10M   62    1     sleeping *0[1]         0.00000 0.00000    0   4459000   219    1104899   468090     9845180    2906048    2702752    55428   6150     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+60     opendirectoryd   0.0  25:06.74 7     6    1375   40M   0B   37M   60    1     sleeping *0[1]         0.00000 0.00000    0   9666193   195    3233630   3007491    68162770   7208890    20567207   204669  1829     0.0   0      0      90     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+59     thermalmonitord  0.0  05:54.28 2     1    55     3057K 0B   1584K 59    1     sleeping *0[1]         0.00000 0.00000    0   1277305   138    1538783   769961     1759505    4066645    1366743    1214    19651    0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+56     syslogd          0.0  01:18.64 3     2    65     2033K 0B   1776K 56    1     sleeping *0[57180]     0.00000 0.00000    0   1014445   89     4398      30009      6050423    606499     1005853    3044    553      0.0   0      0      140    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+52     diskarbitrationd 0.0  02:01.25 2     1    312    4657K 0B   2864K 52    1     sleeping *0[1]         0.00000 0.00000    0   2621594   4469   1011529   1152201    4637961    3295472    1177532    1170    16       0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+51     kernelmanagerd   0.0  00:02.25 2     1    56     10M   0B   10M   51    1     sleeping *0[1]         0.00000 0.00000    0   66824     172    722       1018       13536      3066       17601      6382    15       0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+49     mds              0.0  03:16:17 8     5    530    80M   0B   74M   49    1     sleeping *0[1]         0.00000 0.00000    0   41226337  408    20060533  13956772   411045880  53503572   110058091  60161   299118   0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+45     watchdogd        0.0  00:24.97 3     1    52     2033K 0B   1328K 45    1     sleeping *0[1]         0.00000 0.00000    0   797607    121    459811    225147     269655     1522606    454467     1378    2486     0.0   0      0      210    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+40     remoted          0.0  00:07.46 2     1    101    3489K 0B   3088K 40    1     sleeping *0[1]         0.00000 0.00000    0   502425    139    8094      8836       126505     22619      98448      3532    1701     0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+36     IOMFB_bics_daemo 0.0  00:00.09 2     1    168    2129K 0B   1872K 36    1     sleeping  0[0]         0.00000 0.00000    0   4257      128    946       982        2099       1481       1744       2       0        0.0   0      0      70     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+35     powerd           0.0  09:42.47 3     2    149    5489K 0B   3936K 35    1     sleeping *0[1]         0.00000 0.00000    0   5794240   173    5630181   3530873    14817896   10148196   5964970    8387    3598     0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+33     configd          0.0  09:07.95 7     1    893    7457K 0B   6704K 33    1     sleeping *0[1]         0.00000 0.00000    0   7032289   1085   5277153   3670828    17760287   12298374   4617580    30223   2481     0.0   0      0      140    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+30     systemstats      0.0  01:33.00 2     1    103    5121K 0B   4720K 30    1     sleeping *1[3]         0.00000 0.00000    0   2196160   173    502776    306024     4526803    611582     805534     28273   1525     0.0   0      0      90     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+28     mediaremoted     0.0  11:22.12 5     2    229    14M   0B   14M   28    1     sleeping *0[43132]     0.00000 0.00000    0   3910583   237    14999950  1729668    12154326   27090036   27431515   71296   1640     0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+27     fseventsd        0.0  01:42:35 20    1    197    8113K 0B   5696K 27    1     sleeping *0[1]         0.00000 0.00000    0   11010636  126    12487818  4259523    288242153  25520654   24669367   173     406912   0.0   0      0      40     root                   N/A    N/A   N/A   N/A   N/A   N/A  
+25     UserEventAgent   0.0  02:40.51 4     1    1158   7649K 0B   7024K 25    1     sleeping *0[1]         0.00000 0.00000    0   3664926   219    1073663   816287     4575489    2330620    2846888    16238   857      0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+23     logd             0.0  35:25.11 4     3    1470   23M   0B   29M   23    1     sleeping *0[1]         0.00000 0.00000    0   11157716  125    9576948   10857067   60145313   11275448   23902420   1192439 271      0.0   0      0      180    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+1      launchd          0.0  53:51.54 4     3    3713   22M   0B   11M   1     0     sleeping  0[0]         0.00000 0.00000    0   12485765  53     7711990   7659167    45363931   23106327   12922392   2125    1946     0.0   0      0      999    root                   N/A    N/A   N/A   N/A   N/A   N/A  
+0      kernel_task      0.0  23:53:23 573/8 0    0      50M   0B   0B    0     0     running   0[0]         0.00000 0.00000    0   460883    0      743795335 536413471  0          0          2147483647 373     99829692 0.0   0      0      0      root                   N/A    N/A   N/A   N/A   N/A   N/A  
+Starting a sleep process in the background:
+Sleep process started with PID: 81816
+81816 ttys003    0:00.00 sleep 600
+81818 ttys003    0:00.00 grep sleep
+Killing the sleep process:
+81820 ttys003    0:00.00 grep sleep
+Starting another sleep process:
+Sleep process started with PID: 81821
+Killing all sleep processes:
+81824 ttys003    0:00.00 grep sleep
+
+3. System Information:
+---------------------
+Tue May 20 10:50:23 +05 2025
+Darwin Saydullos-MacBook-Air.local 24.2.0 Darwin Kernel Version 24.2.0: Fri Dec  6 18:40:14 PST 2024; root:xnu-11215.61.5~2/RELEASE_ARM64_T8103 arm64
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s3s1   228Gi    15Gi    83Gi    16%    412k  872M    0%   /
+devfs            213Ki   213Ki     0Bi   100%     738     0  100%   /dev
+/dev/disk3s6     228Gi   7.0Gi    83Gi     8%       7  872M    0%   /System/Volumes/VM
+/dev/disk3s4     228Gi    13Gi    83Gi    14%    1.1k  872M    0%   /System/Volumes/Preboot
+/dev/disk3s2     228Gi   729Mi    83Gi     1%     291  872M    0%   /System/Volumes/Update
+/dev/disk1s2     500Mi   6.0Mi   483Mi     2%       3  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1     500Mi   5.4Mi   483Mi     2%      38  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     500Mi   904Ki   483Mi     1%      42  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s1     228Gi   108Gi    83Gi    57%    841k  872M    0%   /System/Volumes/Data
+map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+/dev/disk3s5     228Gi   1.9Gi    83Gi     3%      69  872M    0%   /Volumes/Recovery
+/dev/disk2s1     5.0Gi   1.6Gi   3.4Gi    33%      58   35M    0%   /System/Volumes/Update/SFR/mnt1
+/dev/disk5s1     8.5Gi   8.2Gi   251Mi    98%      13  2.6M    0%   /Library/Developer/CoreSimulator/Cryptex/Images/bundle/SimRuntimeBundle-EF932E85-7C1A-4439-8E37-B287E4129503
+/dev/disk7s1      19Gi    19Gi   495Mi    98%    557k  5.1M   10%   /Library/Developer/CoreSimulator/Volumes/iOS_22E238
+/dev/disk8s1     477Mi   432Mi    45Mi    91%     804  4.3G    0%   /Volumes/MediaGet
+/dev/disk3s3     228Gi    15Gi    83Gi    16%    425k  872M    0%   /System/Volumes/Update/mnt1
+Memory statistics (using vm_stat):
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                8660.
+Pages active:                             76655.
+Pages inactive:                           73861.
+Pages speculative:                         1813.
+Pages throttled:                              0.
+Pages wired down:                        109986.
+Pages purgeable:                             10.
+"Translation faults":                5465265125.
+Pages copy-on-write:                   61113977.
+Pages zero filled:                   1733864304.
+Pages reactivated:                   1632150470.
+Pages purged:                          79261763.
+File-backed pages:                        54257.
+Anonymous pages:                          98072.
+Pages stored in compressor:             1300845.
+Pages occupied by compressor:            217594.
+Decompressions:                      2051805095.
+Compressions:                        2248199232.
+Pageins:                              109442651.
+Pageouts:                               3266848.
+Swapins:                               66461823.
+Swapouts:                              70467179.
+/bin/ls
+/usr/bin/python3
+
+4. File Compression and Decompression:
+------------------------------------
+file_for_bzip2.txt
+file_for_gzip.txt
+file_for_tar.txt
+saydullo_archive.tar
+file_for_bzip2.txt
+file_for_gzip.txt
+file_for_tar.txt
+saydullo_archive.tar
+file_for_bzip2.txt
+file_for_gzip.txt.gz
+file_for_tar.txt
+saydullo_archive.tar
+file_for_bzip2.txt
+file_for_gzip.txt
+file_for_tar.txt
+saydullo_archive.tar
+file_for_bzip2.txt
+file_for_gzip.txt
+file_for_tar.txt
+saydullo_archive.tar
+saydullo_archive.tar.bz2
+file_for_bzip2.txt
+file_for_gzip.txt
+file_for_tar.txt
+saydullo_archive.tar
+saydullo_archive.tar.bz2
+Cleaned up compression_saydullo directory.
+
+5. File Permissions:
+-------------------
+-rw-r--r--@ 1 saydulloismatov  staff  0 May 20 10:50 saydullo_perms.txt
+-rwxrwxrwx@ 1 saydulloismatov  staff  0 May 20 10:50 saydullo_perms.txt
+-rw-r--r--@ 1 saydulloismatov  staff  0 May 20 10:50 saydullo_perms.txt
+CHMOD(1)                    General Commands Manual                   CHMOD(1)
+
+NNAAMMEE
+     cchhmmoodd – change file modes or Access Control Lists
+
+SSYYNNOOPPSSIISS
+     cchhmmoodd [--ffhhvv] [--RR [--HH | --LL | --PP]] _m_o_d_e _f_i_l_e _._._.
+     cchhmmoodd [--ffhhvv] [--RR [--HH | --LL | --PP]] [-a | +a | =a] _A_C_E _f_i_l_e _._._.
+     cchhmmoodd [--ffhhvv] [--RR [--HH | --LL | --PP]] [--EE] _f_i_l_e _._._.
+     cchhmmoodd [--ffhhvv] [--RR [--HH | --LL | --PP]] [--CC] _f_i_l_e _._._.
+     cchhmmoodd [--ffhhvv] [--RR [--HH | --LL | --PP]] [--NN] _f_i_l_e _._._.
+
+DDEESSCCRRIIPPTTIIOONN
+     The cchhmmoodd utility modifies the file mode bits of the listed files as
+     specified by the _m_o_d_e operand. It may also be used to modify the Access
+     Control Lists (ACLs) associated with the listed files.
+
+     The generic options are as follows:
+
+     --ff      Do not display a diagnostic message if cchhmmoodd could not modify the
+             mode for _f_i_l_e, nor modify the exit status to reflect such
+             failures.
+
+     --HH      If the --RR option is specified, symbolic links on the command line
+             are followed and hence unaffected by the command.  (Symbolic
+             links encountered during tree traversal are not followed.)
+
+     --hh      If the file is a symbolic link, change the mode of the link
+             itself rather than the file that the link points to.
+
+     --LL      If the --RR option is specified, all symbolic links are followed.
+
+     --PP      If the --RR option is specified, no symbolic links are followed.
+             This is the default.
+
+     --RR      Change the modes of the file hierarchies rooted in the files,
+             instead of just the files themselves.  Beware of unintentionally
+             matching the “_._.” hard link to the parent directory when using
+             wildcards like “.*”.
+
+     --vv      Cause cchhmmoodd to be verbose, showing filenames as the mode is
+             modified.  If the --vv flag is specified more than once, the old
+             and new modes of the file will also be printed, in both octal and
+             symbolic notation.
+
+     The --HH, --LL and --PP options are ignored unless the --RR option is specified.
+     In addition, these options override each other and the command's actions
+     are determined by the last one specified.
+
+     If cchhmmoodd receives a SIGINFO signal (see the ssttaattuuss argument for stty(1)),
+     then the current filename as well as the old and new modes are displayed.
+
+     Only the owner of a file or the super-user is permitted to change the
+     mode of a file.
+
+EEXXIITT SSTTAATTUUSS
+     The cchhmmoodd utility exits 0 on success, and >0 if an error occurs.
+
+MMOODDEESS
+     Modes may be absolute or symbolic.  An absolute mode is an octal number
+     constructed from the sum of one or more of the following values:
+
+           4000    (the setuid bit).  Executable files with this bit set will
+                   run with effective uid set to the uid of the file owner.
+                   Directories with this bit set will force all files and sub-
+                   directories created in them to be owned by the directory
+                   owner and not by the uid of the creating process, if the
+                   underlying file system supports this feature: see chmod(2)
+                   and the ssuuiiddddiirr option to mount(8).
+           2000    (the setgid bit).  Executable files with this bit set will
+                   run with effective gid set to the gid of the file owner.
+           1000    (the sticky bit).  See chmod(2) and sticky(7).
+           0400    Allow read by owner.
+           0200    Allow write by owner.
+           0100    For files, allow execution by owner.  For directories,
+                   allow the owner to search in the directory.
+           0040    Allow read by group members.
+           0020    Allow write by group members.
+           0010    For files, allow execution by group members.  For
+                   directories, allow group members to search in the
+                   directory.
+           0004    Allow read by others.
+           0002    Allow write by others.
+           0001    For files, allow execution by others.  For directories
+                   allow others to search in the directory.
+
+     For example, the absolute mode that permits read, write and execute by
+     the owner, read and execute by group members, read and execute by others,
+     and no set-uid or set-gid behaviour is 755 (400+200+100+040+010+004+001).
+
+     The symbolic mode is described by the following grammar:
+
+           mode         ::= clause [, clause ...]
+           clause       ::= [who ...] [action ...] action
+           action       ::= op [perm ...]
+           who          ::= a | u | g | o
+           op           ::= + | - | =
+           perm         ::= r | s | t | w | x | X | u | g | o
+
+     The _w_h_o symbols ``u'', ``g'', and ``o'' specify the user, group, and
+     other parts of the mode bits, respectively.  The _w_h_o symbol ``a'' is
+     equivalent to ``ugo''.
+
+     The _p_e_r_m symbols represent the portions of the mode bits as follows:
+
+           r       The read bits.
+           s       The set-user-ID-on-execution and set-group-ID-on-execution
+                   bits.
+           t       The sticky bit.
+           w       The write bits.
+           x       The execute/search bits.
+           X       The execute/search bits if the file is a directory or any
+                   of the execute/search bits are set in the original
+                   (unmodified) mode.  Operations with the _p_e_r_m symbol ``X''
+                   are only meaningful in conjunction with the _o_p symbol
+                   ``+'', and are ignored in all other cases.
+           u       The user permission bits in the original mode of the file.
+           g       The group permission bits in the original mode of the file.
+           o       The other permission bits in the original mode of the file.
+
+     The _o_p symbols represent the operation performed, as follows:
+
+     +     If no value is supplied for _p_e_r_m, the ``+'' operation has no
+           effect.  If no value is supplied for _w_h_o, each permission bit
+           specified in _p_e_r_m, for which the corresponding bit in the file mode
+           creation mask (see umask(2)) is clear, is set.  Otherwise, the mode
+           bits represented by the specified _w_h_o and _p_e_r_m values are set.
+
+     -     If no value is supplied for _p_e_r_m, the ``-'' operation has no
+           effect.  If no value is supplied for _w_h_o, each permission bit
+           specified in _p_e_r_m, for which the corresponding bit in the file mode
+           creation mask is set, is cleared.  Otherwise, the mode bits
+           represented by the specified _w_h_o and _p_e_r_m values are cleared.
+
+     =     The mode bits specified by the _w_h_o value are cleared, or, if no _w_h_o
+           value is specified, the owner, group and other mode bits are
+           cleared.  Then, if no value is supplied for _w_h_o, each permission
+           bit specified in _p_e_r_m, for which the corresponding bit in the file
+           mode creation mask (see umask(2)) is clear, is set.  Otherwise, the
+           mode bits represented by the specified _w_h_o and _p_e_r_m values are set.
+
+     Each _c_l_a_u_s_e specifies one or more operations to be performed on the mode
+     bits, and each operation is applied to the mode bits in the order
+     specified.
+
+     Operations upon the other permissions only (specified by the symbol ``o''
+     by itself), in combination with the _p_e_r_m symbols ``s'' or ``t'', are
+     ignored.
+
+     The ``w'' permission on directories will permit file creation,
+     relocation, and copy into that directory.  Files created within the
+     directory itself will inherit its group ID.
+
+EEXXAAMMPPLLEESS OOFF VVAALLIIDD MMOODDEESS
+     644           make a file readable by anyone and writable by the owner
+                   only.
+
+     go-w          deny write permission to group and others.
+
+     =rw,+X        set the read and write permissions to the usual defaults,
+                   but retain any execute permissions that are currently set.
+
+     +X            make a directory or file searchable/executable by everyone
+                   if it is already searchable/executable by anyone.
+
+     755
+     u=rwx,go=rx
+     u=rwx,go=u-w  make a file readable/executable by everyone and writable by
+                   the owner only.
+
+     go=           clear all mode bits for group and others.
+
+     g=u-w         set the group bits equal to the user bits, but clear the
+                   group write bit.
+
+AACCLL MMAANNIIPPUULLAATTIIOONN OOPPTTIIOONNSS
+     ACLs are manipulated using extensions to the symbolic mode grammar.  Each
+     file has one ACL, containing an ordered list of entries.  Each entry
+     refers to a user or group, and grants or denies a set of permissions.  In
+     cases where a user and a group exist with the same name, the user/group
+     name can be prefixed with "user:" or "group:" in order to specify the
+     type of name.
+
+     If the user or group name contains spaces you can use ':' as the
+     delimiter between name and permission.
+
+     The following permissions are applicable to all filesystem objects:
+           delete  Delete the item.  Deletion may be granted by either this
+                   permission on an object or the delete_child right on the
+                   containing directory.
+           readattr
+                   Read an object's basic attributes.  This is implicitly
+                   granted if the object can be looked up and not explicitly
+                   denied.
+           writeattr
+                   Write an object's basic attributes.
+           readextattr
+                   Read extended attributes.
+           writeextattr
+                   Write extended attributes.
+           readsecurity
+                   Read an object's extended security information (ACL).
+           writesecurity
+                   Write an object's security information (ownership, mode,
+                   ACL).
+           chown   Change an object's ownership.
+
+     The following permissions are applicable to directories:
+           list    List entries.
+           search  Look up files by name.
+           add_file
+                   Add a file.
+           add_subdirectory
+                   Add a subdirectory.
+           delete_child
+                   Delete a contained object.  See the file delete permission
+                   above.
+
+     The following permissions are applicable to non-directory filesystem
+     objects:
+           read    Open for reading.
+           write   Open for writing.
+           append  Open for writing, but in a fashion that only allows writes
+                   into areas of the file not previously written.
+           execute
+                   Execute the file as a script or program.
+
+     ACL inheritance is controlled with the following permissions words, which
+     may only be applied to directories:
+           file_inherit
+                   Inherit to files.
+           directory_inherit
+                   Inherit to directories.
+           limit_inherit
+                   This flag is only relevant to entries inherited by
+                   subdirectories; it causes the directory_inherit flag to be
+                   cleared in the entry that is inherited, preventing further
+                   nested subdirectories from also inheriting the entry.
+           only_inherit
+                   The entry is inherited by created items but not considered
+                   when processing the ACL.
+
+     The ACL manipulation options are as follows:
+
+     ++aa      The +a mode parses a new ACL entry from the next argument on the
+             commandline and inserts it into the canonical location in the
+             ACL. If the supplied entry refers to an identity already listed,
+             the two entries are combined.
+
+             EExxaammpplleess
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+              # chmod +a "admin allow write" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: admin allow write
+              # chmod +a "guest deny read" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write
+              # chmod +a "admin allow delete" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write,delete
+              .
+              # chmod +a "User 1:allow:read" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: User 1 allow read
+                3: admin allow write,delete
+
+             The +a mode strives to maintain correct canonical form for the
+             ACL.
+                              local deny
+                              local allow
+                              inherited deny
+                              inherited allow
+
+             By default, chmod adds entries to the top of the local deny and
+             local allow lists. Inherited entries are added by using the +ai
+             mode.
+
+             EExxaammpplleess
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write,delete
+                3: juser inherited deny delete
+                4: admin inherited allow delete
+                5: backup inherited deny read
+                6: admin inherited allow write-security
+              # chmod +ai "others allow read" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write,delete
+                3: juser inherited deny delete
+                4: others inherited allow read
+                5: admin inherited allow delete
+                6: backup inherited deny read
+                7: admin inherited allow write-security
+
+     ++aa##     When a specific ordering is required, the exact location at which
+             an entry will be inserted is specified with the +a# mode.
+
+             EExxaammpplleess
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write
+              # chmod +a# 2 "others deny read" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: others deny read
+                3: admin allow write
+
+             The +ai# mode may be used to insert inherited entries at a
+             specific location. Note that these modes allow non-canonical ACL
+             ordering to be constructed.
+
+     --aa      The -a mode is used to delete ACL entries. All entries exactly
+             matching the supplied entry will be deleted. If the entry lists a
+             subset of rights granted by an entry, only the rights listed are
+             removed. Entries may also be deleted by index using the -a# mode.
+
+             EExxaammpplleess
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: guest deny read
+                2: admin allow write,delete
+              # chmod -a# 1 file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: admin allow write,delete
+              # chmod -a "admin allow write" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: admin allow delete
+
+             Inheritance is not considered when processing the -a mode; rights
+             and entries will be removed regardless of their inherited state.
+
+             If the user or group name contains spaces you can use ':' as the
+             delimiter
+
+             EExxaammppllee
+              # chmod +a "User 1:allow:read" file1
+
+     ==aa##     Individual entries are rewritten using the =a# mode.
+
+             EExxaammpplleess
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: admin allow delete
+              # chmod =a# 1 "admin allow write,chown" file1
+              # ls -le
+              -rw-r--r--+ 1 juser  wheel  0 Apr 28 14:06 file1
+                owner: juser
+                1: admin allow write,chown
+
+             This mode may not be used to add new entries.
+
+     --EE      Reads the ACL information from stdin, as a sequential list of
+             ACEs, separated by newlines.  If the information parses
+             correctly, the existing information is replaced.
+
+     --CC      Returns false if any of the named files have ACLs in non-
+             canonical order.
+
+     --ii      Removes the 'inherited' bit from all entries in the named file(s)
+             ACLs.
+
+     --II      Removes all inherited entries from the named file(s) ACL(s).
+
+     --NN      Removes the ACL from the named file(s).
+
+CCOOMMPPAATTIIBBIILLIITTYY
+     The --vv option is non-standard and its use in scripts is not recommended.
+
+SSEEEE AALLSSOO
+     chflags(1), install(1), chmod(2), stat(2), umask(2), fts(3), setmode(3),
+     sticky(7), symlink(7), chown(8), mount(8)
+
+SSTTAANNDDAARRDDSS
+     The cchhmmoodd utility is expected to be IEEE Std 1003.2 (“POSIX.2”)
+     compatible with the exception of the _p_e_r_m symbol “t” which is not
+     included in that standard.
+
+HHIISSTTOORRYY
+     A cchhmmoodd command appeared in Version 1 AT&T UNIX.
+
+macOS 15.2                      January 7, 2017                     macOS 15.2
+Cleaned up permissions_saydullo directory.
+
+6. SSH Commands:
+---------------
+SSH commands require a live remote host and valid credentials. Skipping execution.
+
+7. Searching:
+------------
+Hello World
+./file1.txt:Hello World
+./subdir/file3.txt:Hello from subdir
+-rw-r--r--@ 1 saydulloismatov  staff  12 May 20 10:50 file1.txt
+-rw-r--r--@ 1 saydulloismatov  staff  12 May 20 10:50 file2.txt
+Cleaned up search_saydullo directory.
+
+8. Network Commands:
+-------------------
+PING localhost (127.0.0.1): 56 data bytes
+64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.045 ms
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.149 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.171 ms
+
+--- localhost ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.045/0.122/0.171/0.055 ms
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+refer:        whois.verisign-grs.com
+
+domain:       COM
+
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston VA 20190
+address:      United States of America (the)
+
+contact:      administrative
+name:         Registry Customer Service
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston VA 20190
+address:      United States of America (the)
+phone:        +1 703 925-6999
+fax-no:       +1 703 948 3978
+e-mail:       info@verisign-grs.com
+
+contact:      technical
+name:         Registry Customer Service
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston VA 20190
+address:      United States of America (the)
+phone:        +1 703 925-6999
+fax-no:       +1 703 948 3978
+e-mail:       info@verisign-grs.com
+
+nserver:      A.GTLD-SERVERS.NET 192.5.6.30 2001:503:a83e:0:0:0:2:30
+nserver:      B.GTLD-SERVERS.NET 192.33.14.30 2001:503:231d:0:0:0:2:30
+nserver:      C.GTLD-SERVERS.NET 192.26.92.30 2001:503:83eb:0:0:0:0:30
+nserver:      D.GTLD-SERVERS.NET 192.31.80.30 2001:500:856e:0:0:0:0:30
+nserver:      E.GTLD-SERVERS.NET 192.12.94.30 2001:502:1ca1:0:0:0:0:30
+nserver:      F.GTLD-SERVERS.NET 192.35.51.30 2001:503:d414:0:0:0:0:30
+nserver:      G.GTLD-SERVERS.NET 192.42.93.30 2001:503:eea3:0:0:0:0:30
+nserver:      H.GTLD-SERVERS.NET 192.54.112.30 2001:502:8cc:0:0:0:0:30
+nserver:      I.GTLD-SERVERS.NET 192.43.172.30 2001:503:39c1:0:0:0:0:30
+nserver:      J.GTLD-SERVERS.NET 192.48.79.30 2001:502:7094:0:0:0:0:30
+nserver:      K.GTLD-SERVERS.NET 192.52.178.30 2001:503:d2d:0:0:0:0:30
+nserver:      L.GTLD-SERVERS.NET 192.41.162.30 2001:500:d937:0:0:0:0:30
+nserver:      M.GTLD-SERVERS.NET 192.55.83.30 2001:501:b1f9:0:0:0:0:30
+ds-rdata:     19718 13 2 8acbb0cd28f41250a80a491389424d341522d946b0da0c0291f2d3d771d7805a
+
+whois:        whois.verisign-grs.com
+
+status:       ACTIVE
+remarks:      Registration information: http://www.verisigninc.com
+
+created:      1985-01-01
+changed:      2023-12-07
+source:       IANA
+
+# whois.verisign-grs.com
+
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2019-09-09T15:39:04Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2028-09-14T04:00:00Z
+   Registrar: MarkMonitor Inc.
+   Registrar IANA ID: 292
+   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+   Registrar Abuse Contact Phone: +1.2086851750
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+   Name Server: NS1.GOOGLE.COM
+   Name Server: NS2.GOOGLE.COM
+   Name Server: NS3.GOOGLE.COM
+   Name Server: NS4.GOOGLE.COM
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2025-05-20T05:50:16Z <<<
+
+# whois.markmonitor.com
+
+Domain Name: google.com
+Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2024-08-02T02:17:33+0000
+Creation Date: 1997-09-15T07:00:00+0000
+Registrar Registration Expiration Date: 2028-09-13T07:00:00+0000
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2086851750
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: Google LLC
+Registrant State/Province: CA
+Registrant Country: US
+Registrant Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Admin Organization: Google LLC
+Admin State/Province: CA
+Admin Country: US
+Admin Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Tech Organization: Google LLC
+Tech State/Province: CA
+Tech Country: US
+Tech Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Name Server: ns1.google.com
+Name Server: ns2.google.com
+Name Server: ns4.google.com
+Name Server: ns3.google.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2025-05-20T05:47:08+0000 <<<
+
+
+; <<>> DiG 9.10.6 <<>> google.com A
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 14337
+;; flags: qr rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;google.com.			IN	A
+
+;; ANSWER SECTION:
+google.com.		4502	IN	A	216.58.211.238
+
+;; Query time: 48 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Tue May 20 10:50:27 +05 2025
+;; MSG SIZE  rcvd: 55
+
+
+; <<>> DiG 9.10.6 <<>> -x 8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30698
+;; flags: qr rd; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+;; WARNING: recursion requested but not available
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;8.8.8.8.in-addr.arpa.		IN	PTR
+
+;; ANSWER SECTION:
+8.8.8.8.in-addr.arpa.	4502	IN	PTR	dns.google.
+
+;; Query time: 33 msec
+;; SERVER: 172.20.10.1#53(172.20.10.1)
+;; WHEN: Tue May 20 10:50:27 +05 2025
+;; MSG SIZE  rcvd: 73
+
+wget command not found on this system. It can be installed using Homebrew: brew install wget.
+
+9. Package Installation:
+----------------------
+dpkg and rpm are specific to Linux distributions. On macOS, use Homebrew (brew) for package management.
+
+Lab 1 tasks completed successfully.
